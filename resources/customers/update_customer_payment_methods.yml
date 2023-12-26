@@ -15,13 +15,9 @@ put:
                 propertyName: type
                 mapping:
                   cash: payment_method_cash_response
-                  card: payment_method_card_response
                   oxxo_recurrent: payment_method_cash_response
-                  spei_recurrent: payment_method_spei_recurrent
             oneOf:
               - $ref: '../../schemas/customers/customer_payment_method_cash_response.yml#/payment_method_cash_response' 
-              - $ref: '../../schemas/customers/customer_payment_method_card_response.yml#/payment_method_card_response'
-              - $ref: '../../schemas/customers/customer_payment_method_spei_recurrent_response.yml#/payment_method_spei_recurrent'
             
     401:
      $ref: '../errors/401.yml'
@@ -57,13 +53,9 @@ delete:
                 propertyName: type
                 mapping:
                   cash: payment_method_cash_response
-                  card: payment_method_card_response
                   oxxo_recurrent: payment_method_cash_response
-                  spei_recurrent: payment_method_spei_recurrent
             oneOf:
               - $ref: '../../schemas/customers/customer_payment_method_cash_response.yml#/payment_method_cash_response' 
-              - $ref: '../../schemas/customers/customer_payment_method_card_response.yml#/payment_method_card_response'
-              - $ref: '../../schemas/customers/customer_payment_method_spei_recurrent_response.yml#/payment_method_spei_recurrent'
             
     401:
      $ref: '../errors/401.yml'

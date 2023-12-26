@@ -9,7 +9,7 @@ properties:
     description: "Are the payment methods available for this link"
     items:
       type: string
-    example: [ "cash", "card", "bank_transfer"]
+    example: [ "cash"]
   expires_at:
     type: integer
     format: int64
@@ -17,15 +17,6 @@ properties:
   failure_url: 
     type: string
     description: "Redirection url back to the site in case of failed payment, applies only to HostedPayment."
-  monthly_installments_enabled:
-    type: boolean
-    example: false
-  monthly_installments_options:
-    type: array
-    items:
-      type: integer
-      format: int8
-    example: [3,6,12]
   name:
     type: string
     description: "Reason for payment"

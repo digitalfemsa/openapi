@@ -6,10 +6,10 @@ content:
     example:
       details: [
         {
-          message: "The token does not exist.",
-          param:  "payment_method.token_id",
-          code:  "conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token",
-          debug_message: "The token does not exist."
+          message: "The name does not exist.",
+          param:  "payment_method.name",
+          code:  "conekta.errors.parameter_validation.payment_method.name.nonexistent_token",
+          debug_message: "The name does not exist."
         }
       ]
       log_id: "641b6d813cd9a50001515017"

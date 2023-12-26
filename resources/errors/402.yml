@@ -6,9 +6,9 @@ content:
     example:
       details: [
         {
-          message: "The card could not be processed.",
-          code: "conekta.errors.processing.tokenization.used",
-          debug_message: "The token has already been used.",
+          message: "The order could not be processed.",
+          code: "conekta.errors.processing.order.used",
+          debug_message: "The order has already been used.",
         }
       ]
       log_id: "641b6d073cd9a50001515007"

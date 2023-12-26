@@ -3,10 +3,8 @@ value:
   charges:
   - amount: 40000
     expires_at: 1677196303
-    monthly_installments: 0
     payment_method:
-      type: card
-      token_id: tok_2897348234
+      type: cash
       payment_source_id: src_2tLkkyfMPh6v7pFry
     reference_id: string
   currency: MXN

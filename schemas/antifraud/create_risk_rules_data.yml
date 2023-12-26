@@ -10,7 +10,7 @@ properties:
     description: 'Description of the rule'
   field:
     type: string
-    example: 'email | phone | card_token'
+    example: 'email | phone '
     description: 'Field to be used for the rule'
   value:
     type: string

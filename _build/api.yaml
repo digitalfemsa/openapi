@@ -685,10 +685,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -1826,7 +1826,6 @@ paths:
     post:
       description: |
         The purpose of business is to create and keep a customer, you will learn what elements you need to create a customer.
-        Remember the credit and debit card tokenization process: [https://developers.conekta.com/page/web-checkout-tokenizer](https://developers.conekta.com/page/web-checkout-tokenizer)
       operationId: createCustomer
       parameters:
       - description: Use for knowing which language to use
@@ -1907,9 +1906,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -1921,10 +1920,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -2002,10 +2001,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -2223,9 +2222,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -2237,10 +2236,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -2350,10 +2349,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -2470,10 +2469,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -2793,10 +2792,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -2910,10 +2909,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -3029,10 +3028,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -3763,8 +3762,6 @@ paths:
               examples:
                 cash:
                   $ref: '#/components/examples/order_cash'
-                card:
-                  $ref: '#/components/examples/order_card'
               schema:
                 $ref: '#/components/schemas/order_response'
           description: successful operation
@@ -3773,10 +3770,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -3802,9 +3799,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -4001,10 +3998,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -4096,9 +4093,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -4447,10 +4444,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -4566,10 +4563,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -4680,9 +4677,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -4710,10 +4707,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -4813,9 +4810,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -4843,10 +4840,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -4984,9 +4981,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -4998,10 +4995,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -5113,9 +5110,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -5127,10 +5124,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -5246,9 +5243,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -5276,10 +5273,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -5395,9 +5392,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -5425,10 +5422,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -5546,9 +5543,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -5576,10 +5573,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -5697,9 +5694,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -5727,10 +5724,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -5828,30 +5825,6 @@ paths:
         "200":
           content:
             application/vnd.conekta-v2.1.0+json:
-              examples:
-                card:
-                  summary: Card
-                  value:
-                    next_page_url: null
-                    previous_page_url: null
-                    has_more: false
-                    object: list
-                    data:
-                    - id: src_2tbd5Bg327RL9oyas
-                      object: payment_source
-                      type: card
-                      created_at: 1679958561
-                      last4: "0526"
-                      bin: "41898989"
-                      card_type: debit
-                      exp_month: "01"
-                      exp_year: "25"
-                      brand: visa
-                      name: random name
-                      parent_id: cus_2tUkvasdas1s4ihjs
-                      default: false
-                      payment_source_status: active
-                      visible_on_checkout: false
               schema:
                 $ref: '#/components/schemas/get_payment_method_response'
           description: successful operation
@@ -5987,10 +5960,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -6105,10 +6078,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -6224,10 +6197,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -6350,10 +6323,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -6464,10 +6437,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -6575,10 +6548,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -6709,10 +6682,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -6845,10 +6818,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -7094,10 +7067,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -7230,10 +7203,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -7343,10 +7316,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -7461,10 +7434,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -7580,10 +7553,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -7800,10 +7773,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -7938,10 +7911,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -8211,9 +8184,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -8241,10 +8214,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -8362,9 +8335,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -8498,9 +8471,9 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The card could not be processed.
-                  code: conekta.errors.processing.tokenization.used
-                  debug_message: The token has already been used.
+                - message: The order could not be processed.
+                  code: conekta.errors.processing.order.used
+                  debug_message: The order has already been used.
                 log_id: 641b6d073cd9a50001515007
                 object: error
                 type: processing_error
@@ -8528,10 +8501,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -8728,10 +8701,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -8847,10 +8820,10 @@ paths:
             application/vnd.conekta-v2.1.0+json:
               example:
                 details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
+                - message: The name does not exist.
+                  param: payment_method.name
+                  code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+                  debug_message: The name does not exist.
                 log_id: 641b6d813cd9a50001515017
                 object: error
                 type: parameter_validation_error
@@ -8895,114 +8868,6 @@ paths:
       summary: Update Tax
       tags:
       - Taxes
-  /tokens:
-    post:
-      description: |
-        Generate a payment token, to associate it with a card
-      operationId: createToken
-      parameters:
-      - description: Use for knowing which language to use
-        examples:
-          es:
-            summary: for spanish request/response
-            value: es
-          en:
-            summary: for english request/response
-            value: en
-        in: header
-        name: Accept-Language
-        required: false
-        schema:
-          default: es
-          enum:
-          - es
-          - en
-          type: string
-      requestBody:
-        $ref: '#/components/requestBodies/token'
-      responses:
-        "200":
-          content:
-            application/vnd.conekta-v2.1.0+json:
-              schema:
-                $ref: '#/components/schemas/token_response'
-          description: successful operation
-          headers:
-            Date:
-              description: The date and time that the response was sent
-              schema:
-                example: "Fri, 03 Feb 2023 16:57:48 GMT"
-                type: string
-            Content-Type:
-              description: The format of the response body
-              schema:
-                example: application/json; charset=utf-8
-                type: string
-            Content-Length:
-              description: The length of the response body in bytes
-              schema:
-                example: "2737"
-                type: string
-            Connection:
-              description: The type of connection used to transfer the response
-              schema:
-                example: keep-alive
-                type: string
-            Conekta-Media-Type:
-              schema:
-                example: conekta-v2.1.0; format=application/json
-                type: string
-        "401":
-          content:
-            application/vnd.conekta-v2.1.0+json:
-              example:
-                details:
-                - message: Please include your access key in your request.
-                  param: null
-                  code: conekta.errors.authentication.missing_key
-                log_id: 507f1f77bcf86cd799439011
-                object: error
-                type: authentication_error
-              schema:
-                $ref: '#/components/schemas/error'
-          description: authentication error
-        "422":
-          content:
-            application/vnd.conekta-v2.1.0+json:
-              example:
-                details:
-                - message: The token does not exist.
-                  param: payment_method.token_id
-                  code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-                  debug_message: The token does not exist.
-                log_id: 641b6d813cd9a50001515017
-                object: error
-                type: parameter_validation_error
-              schema:
-                $ref: '#/components/schemas/error'
-          description: parameter validation error
-        "500":
-          content:
-            application/vnd.conekta-v2.1.0+json:
-              example:
-                details:
-                - debug_message: There was a runtime error and Conekta engineers have
-                    been notified.
-                  message: There was a runtime error and Conekta engineers have been
-                    notified.
-                  param: null
-                  code: conekta.errors.api.system.general_failure
-                object: error
-                type: api_error
-                log_id: 641b6f2b3cd9a50001515098
-              schema:
-                $ref: '#/components/schemas/error'
-          description: internal server error
-      security:
-      - bearerAuth: []
-      summary: Create Token
-      tags:
-      - Tokens
   /transactions:
     get:
       description: Get transaction details in the form of a list
@@ -10670,39 +10535,6 @@ components:
         fee: 537
         customer_id: null
         order_id: ord_2s53K99C8GXVmCfPm
-    order_card:
-      value:
-        id: 63dab7d00558720001bb3c7d
-        livemode: "true,"
-        created_at: "1675278289,"
-        currency: MXN
-        failure_code: suspected_fraud
-        failure_message: Este cargo ha sido declinado porque el comportamiento del
-          comprador es sospechoso.
-        device_fingerprint: 6FR3chaU4Y1nGAW5NAGd1rcjAKa142Ba
-        payment_method:
-          name: Fulanito Perez
-          exp_month: 2
-          exp_year: 30
-          object: card_payment
-          type: credit
-          last4: 4242
-          brand: visa
-          issuer: BANAMEX
-          account_type: Credit
-          country: MX
-          fraud_indicators:
-          - description: El usuario está utilizando una tarjeta de crédito o débito
-              de prueba en modo producción.
-            weight: null
-            value: null
-        object: charge
-        description: Payment from order
-        status: declined
-        amount: "20001,"
-        fee: "116,"
-        customer_id: null
-        order_id: ord_2tHuwPhgSwq6Gt7Rg
     shipping:
       value:
         amount: 0
@@ -10719,10 +10551,8 @@ components:
         charges:
         - amount: 40000
           expires_at: 1677196303
-          monthly_installments: 0
           payment_method:
-            type: card
-            token_id: tok_2897348234
+            type: cash
             payment_source_id: src_2tLkkyfMPh6v7pFry
           reference_id: string
         currency: MXN
@@ -10810,12 +10640,9 @@ components:
       value:
         checkout:
           allowed_payment_methods:
-          - "[cash, card, bank_transfer]"
+          - "[cash]"
           expires_at: 0
           failure_url: string
-          monthly_installments_enabled: false
-          monthly_installments_options:
-          - 0
           name: string
           on_demand_enabled: true
           success_url: string
@@ -10882,31 +10709,6 @@ components:
             additionalProp1: {}
             additionalProp2: {}
             additionalProp3: {}
-    split_payment_with_2_cards:
-      summary: Create an order with 2 card charges
-      value:
-        charges:
-        - amount: 40000
-          payment_method:
-            type: card
-            token_id: tok_2897348234
-        - amount: 40000
-          payment_method:
-            type: card
-            token_id: tok_2897348235
-        currency: MXN
-        customer_info:
-          name: DevTest
-          email: test@conekta.com
-          phone: "5522997233"
-          corporate: false
-        line_items:
-          description: string
-          sku: string
-          name: Box of Cohiba S1s
-          unit_price: 40000
-          quantity: 2
-          brand: string
     split_payment_with_cash:
       summary: Create an order with 3 cash charges
       value:
@@ -10932,40 +10734,6 @@ components:
           name: Box of Cohiba S1s
           unit_price: 10000
           quantity: 3
-          brand: string
-    split_payment_with_cash_card:
-      summary: Create an order with 3 cash and 2 card charges
-      value:
-        charges:
-        - amount: 10000
-          payment_method:
-            type: card
-            token_id: tok_2897348234
-        - amount: 10000
-          payment_method:
-            type: card
-            token_id: tok_2897348235
-        - amount: 10000
-          payment_method:
-            type: cash
-        - amount: 10000
-          payment_method:
-            type: cash
-        - amount: 10000
-          payment_method:
-            type: cash
-        currency: MXN
-        customer_info:
-          name: DevTest
-          email: test@conekta.com
-          phone: "5522997233"
-          corporate: false
-        line_items:
-          description: string
-          sku: string
-          name: Box of Cohiba S1s
-          unit_price: 50000
-          quantity: 1
           brand: string
   parameters:
     accept_language:
@@ -11219,12 +10987,8 @@ components:
               $ref: '#/components/examples/order_with_charges'
             order_with_checkout:
               $ref: '#/components/examples/order_with_checkout'
-            split_payment_with_2_card_charges:
-              $ref: '#/components/examples/split_payment_with_2_cards'
             split_payment_with_3_cash_charges:
               $ref: '#/components/examples/split_payment_with_cash'
-            split_payment_with_cash_card_charges:
-              $ref: '#/components/examples/split_payment_with_cash_card'
           schema:
             $ref: '#/components/schemas/order_request'
       description: requested field for order
@@ -11282,13 +11046,9 @@ components:
       content:
         application/json:
           examples:
-            card:
-              value:
-                type: card
-                token_id: tok_test_visa_4242
             cash:
               value:
-                type: spei_recurrent
+                type: oxxo_recurrent
                 expires_at: 1553273553
           schema:
             $ref: '#/components/schemas/CreateCustomerPaymentMethods_request'
@@ -11363,13 +11123,6 @@ components:
           schema:
             $ref: '#/components/schemas/update_order_tax_request'
       description: requested field for taxes
-      required: true
-    token:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/token'
-      description: requested field for token
       required: true
     webhook:
       content:
@@ -11452,10 +11205,10 @@ components:
         application/vnd.conekta-v2.1.0+json:
           example:
             details:
-            - message: The token does not exist.
-              param: payment_method.token_id
-              code: conekta.errors.parameter_validation.payment_method.token_id.nonexistent_token
-              debug_message: The token does not exist.
+            - message: The name does not exist.
+              param: payment_method.name
+              code: conekta.errors.parameter_validation.payment_method.name.nonexistent_token
+              debug_message: The name does not exist.
             log_id: 641b6d813cd9a50001515017
             object: error
             type: parameter_validation_error
@@ -11498,9 +11251,9 @@ components:
         application/vnd.conekta-v2.1.0+json:
           example:
             details:
-            - message: The card could not be processed.
-              code: conekta.errors.processing.tokenization.used
-              debug_message: The token has already been used.
+            - message: The order could not be processed.
+              code: conekta.errors.processing.order.used
+              debug_message: The order has already been used.
             log_id: 641b6d073cd9a50001515007
             object: error
             type: processing_error
@@ -11545,7 +11298,7 @@ components:
           type: string
         field:
           description: Field to be used for the rule
-          example: email | phone | card_token
+          example: 'email | phone '
           type: string
         value:
           description: Value to be used for the rule
@@ -11828,9 +11581,6 @@ components:
         livemode:
           example: true
           type: boolean
-        monthly_installments:
-          nullable: true
-          type: integer
         object:
           type: string
         order_id:
@@ -12330,8 +12080,6 @@ components:
         allowed_payment_methods:
           example:
           - cash
-          - card
-          - bank_transfer
           items:
             type: string
           type: array
@@ -12341,10 +12089,6 @@ components:
         emails_sent:
           example: 0
           type: integer
-        exclude_card_networks:
-          items:
-            type: object
-          type: array
         expires_at:
           example: 1680397724
           format: int64
@@ -12352,9 +12096,6 @@ components:
         failure_url:
           example: https://pay.conekta.com/failure
           type: string
-        force_3ds_flow:
-          example: false
-          type: boolean
         id:
           example: b0bf16c4-18b9-445e-ba24-01604f329dbf
           type: string
@@ -12366,18 +12107,6 @@ components:
           example:
             key: value
           type: object
-        monthly_installments_enabled:
-          example: false
-          type: boolean
-        monthly_installments_options:
-          example:
-          - 3
-          - 6
-          - 12
-          items:
-            format: int8
-            type: integer
-          type: array
         name:
           description: Reason for charge
           example: Payment Link Name 1594138857
@@ -12448,52 +12177,6 @@ components:
             type: integer
           provider:
             example: Oxxo
-            type: string
-        type: object
-    payment_method_card_response:
-      allOf:
-      - $ref: '#/components/schemas/payment_method_response'
-      - description: use for card responses
-        properties:
-          last4:
-            example: "6410"
-            type: string
-          bin:
-            example: "40276657"
-            type: string
-          card_type:
-            example: debit
-            type: string
-          exp_month:
-            example: "10"
-            type: string
-          exp_year:
-            example: "25"
-            type: string
-          brand:
-            example: visa
-            type: string
-          name:
-            example: Fulano Perez"
-            type: string
-          default:
-            type: boolean
-          visible_on_checkout:
-            type: boolean
-          payment_source_status:
-            example: active
-            type: string
-        type: object
-    payment_method_spei_recurrent:
-      allOf:
-      - $ref: '#/components/schemas/payment_method_response'
-      - description: use for spei responses
-        properties:
-          reference:
-            example: "93000262276908"
-            type: string
-          expires_at:
-            example: none
             type: string
         type: object
     plan_response:
@@ -12677,34 +12360,6 @@ components:
       description: create new taxes for an existing order response
       required:
       - id
-    token_response:
-      description: token response
-      properties:
-        checkout:
-          $ref: '#/components/schemas/token_response_checkout'
-        id:
-          description: Unique identifier for the token generated by Conekta.
-          example: cus_2tHJfJ79KyUwpxTik
-          type: string
-        livemode:
-          description: Indicates whether the token is in live mode or test mode.
-          example: true
-          type: boolean
-        object:
-          description: "Indicates the type of object, in this case token"
-          example: token
-          type: string
-        used:
-          description: Indicates if the token has been used
-          example: false
-          type: boolean
-      required:
-      - id
-      - livemode
-      - object
-      - used
-      title: token response
-      type: object
     transaction_response:
       description: "The Transaction object represents the actions or steps of an order.\
         \ Statuses can be: unprocessed, pending, available, owen, paid_out, voided,\
@@ -13305,10 +12960,6 @@ components:
           description: Allows you to fill out the shipping information at checkout
           example: false
           type: boolean
-        pre_authorize:
-          default: false
-          description: Indicates whether the order charges must be preauthorized
-          type: boolean
         processing_mode:
           description: "Indicates the processing mode for the order, either ecommerce,\
             \ recurrent or validation."
@@ -13334,9 +12985,6 @@ components:
           items:
             $ref: '#/components/schemas/order_tax_request'
           type: array
-        three_ds_mode:
-          description: "Indicates the 3DS2 mode for the order, either smart or strict."
-          type: string
       required:
       - currency
       - customer_info
@@ -13502,8 +13150,6 @@ components:
             link
           example:
           - cash
-          - card
-          - bank_transfer
           items:
             type: string
           type: array
@@ -13514,22 +13160,6 @@ components:
           example: 1680397724
           format: int64
           type: integer
-        monthly_installments_enabled:
-          description: This flag allows you to specify if months without interest
-            will be active.
-          example: true
-          type: boolean
-        monthly_installments_options:
-          description: This field allows you to specify the number of months without
-            interest.
-          example:
-          - 3
-          - 6
-          - 12
-          items:
-            format: int8
-            type: integer
-          type: array
         name:
           description: Reason for charge
           example: Payment Link Name 1594138857
@@ -13569,20 +13199,6 @@ components:
       - type
       title: checkout_request
       type: object
-    payment_method_card_request:
-      allOf:
-      - $ref: '#/components/schemas/customer_payment_method_request'
-      - properties:
-          token_id:
-            description: "Token id that will be used to create a \"card\" type payment\
-              \ method. See the (subscriptions)[https://developers.conekta.com/v2.1.0/reference/createsubscription]\
-              \ tutorial for more information on how to tokenize cards."
-            example: tok_32hj4g234as
-            type: string
-        type: object
-      required:
-      - token_id
-      title: payment_method_card_request
     payment_method_cash_request:
       allOf:
       - $ref: '#/components/schemas/customer_payment_method_request'
@@ -13593,22 +13209,12 @@ components:
             type: integer
         type: object
       title: payment_method_cash_request
-    payment_method_spei_request:
-      allOf:
-      - $ref: '#/components/schemas/customer_payment_method_request'
-      - properties:
-          expires_at:
-            example: 1553273553
-            format: int64
-            type: integer
-        type: object
-      title: payment_method_spei_request
     update_payment_methods:
       properties:
         name:
           example: name of person
           type: string
-      title: update_payment_methods_card
+      title: update_payment_methods
       type: object
     plan_request:
       description: a plan
@@ -13861,15 +13467,6 @@ components:
           maxProperties: 100
           type: object
       type: object
-    token:
-      description: a token
-      properties:
-        card:
-          $ref: '#/components/schemas/token_card'
-        checkout:
-          $ref: '#/components/schemas/token_checkout'
-      title: token request
-      type: object
     webhook_request:
       description: a webhook
       properties:
@@ -13973,103 +13570,6 @@ components:
             example: OXXO
             type: string
         title: charge_data_payment_method_cash_response
-        type: object
-    payment_method_card:
-      allOf:
-      - $ref: '#/components/schemas/payment_method'
-      - description: use for card responses
-        properties:
-          account_type:
-            example: Credit
-            type: string
-          auth_code:
-            example: "867372"
-            type: string
-          brand:
-            example: visa
-            type: string
-          contract_id:
-            description: Id sent for recurrent charges.
-            example: S781317595
-            type: string
-          country:
-            example: MX
-            type: string
-          exp_month:
-            example: "02"
-            type: string
-          exp_year:
-            example: "30"
-            type: string
-          fraud_indicators:
-            items: {}
-            type: array
-          issuer:
-            example: BANAMEX
-            type: string
-          last4:
-            example: "4242"
-            type: string
-          name:
-            example: Fulanito Perez
-            type: string
-        title: charge_data_payment_method_card_response
-        type: object
-    payment_method_bank_transfer:
-      allOf:
-      - $ref: '#/components/schemas/payment_method'
-      - description: use for bank transfer responses
-        properties:
-          bank:
-            example: STP
-            type: string
-          clabe:
-            example: "646180111805034237"
-            type: string
-          description:
-            nullable: true
-            type: string
-          executed_at:
-            nullable: true
-            type: integer
-          expires_at:
-            example: 1683053729
-            format: int64
-            type: integer
-          issuing_account_bank:
-            nullable: true
-            type: string
-          issuing_account_number:
-            nullable: true
-            type: string
-          issuing_account_holder_name:
-            nullable: true
-            type: string
-          issuing_account_tax_id:
-            nullable: true
-            type: string
-          payment_attempts:
-            items: {}
-            type: array
-          receiving_account_holder_name:
-            nullable: true
-            type: string
-          receiving_account_number:
-            example: "646180111805034237"
-            type: string
-          receiving_account_bank:
-            example: STP
-            type: string
-          receiving_account_tax_id:
-            nullable: true
-            type: string
-          reference_number:
-            nullable: true
-            type: string
-          tracking_code:
-            nullable: true
-            type: string
-        title: charge_data_payment_method_bank_transfer_response
         type: object
     company_payout_destination_response:
       description: Company payout destination model
@@ -14268,8 +13768,6 @@ components:
           description: Are the payment methods available for this link
           example:
           - cash
-          - card
-          - bank_transfer
           items:
             type: string
           type: array
@@ -14281,18 +13779,6 @@ components:
           description: "Redirection url back to the site in case of failed payment,\
             \ applies only to HostedPayment."
           type: string
-        monthly_installments_enabled:
-          example: false
-          type: boolean
-        monthly_installments_options:
-          example:
-          - 3
-          - 6
-          - 12
-          items:
-            format: int8
-            type: integer
-          type: array
         name:
           description: Reason for payment
           type: string
@@ -14349,7 +13835,7 @@ components:
       properties:
         type:
           description: Type of payment method
-          example: card | cash | spei
+          example: cash
           type: string
       required:
       - type
@@ -14705,14 +14191,10 @@ components:
       discriminator:
         mapping:
           cash: payment_method_cash_response
-          card: payment_method_card_response
           oxxo_recurrent: payment_method_cash_response
-          spei_recurrent: payment_method_spei_recurrent
         propertyName: type
       oneOf:
       - $ref: '#/components/schemas/payment_method_cash_response'
-      - $ref: '#/components/schemas/payment_method_card_response'
-      - $ref: '#/components/schemas/payment_method_spei_recurrent'
       title: get_customer_payment_method_data_response
     get_payment_method_response:
       allOf:
@@ -14729,34 +14211,24 @@ components:
       description: Contains details of the payment methods that the customer has active
         or has used in Conekta
       oneOf:
-      - $ref: '#/components/schemas/payment_method_card_request'
       - $ref: '#/components/schemas/payment_method_cash_request'
-      - $ref: '#/components/schemas/payment_method_spei_request'
     create_customer_payment_methods_response:
       discriminator:
         mapping:
           cash: payment_method_cash_response
-          card: payment_method_card_response
           oxxo_recurrent: payment_method_cash_response
-          spei_recurrent: payment_method_spei_recurrent
         propertyName: type
       oneOf:
       - $ref: '#/components/schemas/payment_method_cash_response'
-      - $ref: '#/components/schemas/payment_method_card_response'
-      - $ref: '#/components/schemas/payment_method_spei_recurrent'
       title: create_customer_payment_methods_response
     update_customer_payment_methods_response:
       discriminator:
         mapping:
           cash: payment_method_cash_response
-          card: payment_method_card_response
           oxxo_recurrent: payment_method_cash_response
-          spei_recurrent: payment_method_spei_recurrent
         propertyName: type
       oneOf:
       - $ref: '#/components/schemas/payment_method_cash_response'
-      - $ref: '#/components/schemas/payment_method_card_response'
-      - $ref: '#/components/schemas/payment_method_spei_recurrent'
       title: update_customer_payment_methods_response
     get_plans_response:
       allOf:
@@ -14894,13 +14366,9 @@ components:
       discriminator:
         mapping:
           cash_payment: payment_method_cash
-          card_payment: payment_method_card
-          bank_transfer_payment: payment_method_bank_transfer
         propertyName: object
       oneOf:
       - $ref: '#/components/schemas/payment_method_cash'
-      - $ref: '#/components/schemas/payment_method_card'
-      - $ref: '#/components/schemas/payment_method_bank_transfer'
       title: charge_response_payment_method
     charge_response_refunds_data:
       properties:
@@ -14955,13 +14423,9 @@ components:
       discriminator:
         mapping:
           cash_payment: payment_method_cash
-          card_payment: payment_method_card
-          bank_transfer_payment: payment_method_bank_transfer
         propertyName: object
       oneOf:
       - $ref: '#/components/schemas/payment_method_cash'
-      - $ref: '#/components/schemas/payment_method_card'
-      - $ref: '#/components/schemas/payment_method_bank_transfer'
       title: charge_order_response_payment_method
     customer_antifraud_info_response:
       nullable: true
@@ -15014,14 +14478,10 @@ components:
       discriminator:
         mapping:
           cash: payment_method_cash_response
-          card: payment_method_card_response
           oxxo_recurrent: payment_method_cash_response
-          spei_recurrent: payment_method_spei_recurrent
         propertyName: type
       oneOf:
       - $ref: '#/components/schemas/payment_method_cash_response'
-      - $ref: '#/components/schemas/payment_method_card_response'
-      - $ref: '#/components/schemas/payment_method_spei_recurrent'
       title: customer_payment_methods_data
     customer_payment_methods_response:
       allOf:
@@ -15241,10 +14701,6 @@ components:
         emails_sent:
           example: 0
           type: integer
-        exclude_card_networks:
-          items:
-            type: object
-          type: array
         expires_at:
           example: 1676613599
           format: int64
@@ -15252,9 +14708,6 @@ components:
         failure_url:
           example: http://187.216.228.66:2222/SysVentasPagos/Acceso.aspx
           type: string
-        force_3ds_flow:
-          example: false
-          type: boolean
         id:
           example: 6fca054a-8519-4c43-971e-cea35cc519bb
           type: string
@@ -15268,14 +14721,6 @@ components:
           additionalProperties: true
           maxProperties: 100
           type: object
-        monthly_installments_enabled:
-          example: false
-          type: boolean
-        monthly_installments_options:
-          items:
-            format: int8
-            type: integer
-          type: array
         name:
           example: ord-2tNDzhA4Akmzj11AS
           type: string
@@ -15289,9 +14734,6 @@ components:
           example: true
           nullable: true
           type: boolean
-        paid_payments_count:
-          example: 0
-          type: integer
         recurrent:
           example: false
           type: boolean
@@ -15491,105 +14933,6 @@ components:
           nullable: true
           type: boolean
       type: object
-    token_response_checkout:
-      deprecated: true
-      nullable: true
-      properties:
-        allowed_payment_methods:
-          items:
-            example: card
-            type: string
-          type: array
-        can_not_expire:
-          description: Indicates if the checkout can not expire.
-          example: false
-          type: boolean
-        emails_sent:
-          example: 0
-          type: integer
-        exclude_card_networks:
-          items:
-            example: visa
-            type: string
-          type: array
-        expires_at:
-          description: Date and time when the checkout expires.
-          example: 1675715413
-          format: int64
-          type: integer
-        failure_url:
-          description: URL to redirect the customer to if the payment process fails.
-          example: https://example.com/failure
-          type: string
-        force_3ds_flow:
-          description: Indicates if the checkout forces the 3DS flow.
-          example: false
-          type: boolean
-        id:
-          example: 524f9d2f-8c2e-4e64-a33d-6006711a91bd
-          type: string
-        livemode:
-          example: true
-          type: boolean
-        metadata:
-          additionalProperties: true
-          example:
-            key: value
-          type: object
-        monthly_installments_enabled:
-          description: Indicates if the checkout allows monthly installments.
-          example: false
-          type: boolean
-        monthly_installments_options:
-          description: List of monthly installments options.
-          items:
-            example: 3
-            type: integer
-          type: array
-        name:
-          example: tok-2toNoPZpJgRU4PvgZ
-          type: string
-        needs_shipping_contact:
-          example: false
-          type: boolean
-        object:
-          description: "Indicates the type of object, in this case checkout."
-          example: checkout
-          type: string
-        on_demand_enabled:
-          description: Indicates if the checkout allows on demand payments.
-          example: false
-          type: boolean
-        paid_payments_count:
-          description: Number of payments that have been paid.
-          example: 0
-          type: integer
-        recurrent:
-          description: Indicates if the checkout is recurrent.
-          example: false
-          type: boolean
-        sms_sent:
-          example: 0
-          type: integer
-        starts_at:
-          description: Date and time when the checkout starts.
-          example: 1675715413
-          format: int64
-          type: integer
-        status:
-          description: Status of the checkout.
-          example: Issued
-          type: string
-        success_url:
-          description: URL to redirect the customer to after the payment process is
-            completed.
-          example: https://example.com/success
-          type: string
-        type:
-          description: Type of checkout.
-          example: Integration
-          type: string
-      type: object
     transfer_method_response:
       description: Method used to make the transfer.
       properties:
@@ -15675,24 +15018,11 @@ components:
           example: 1677196303
           format: int64
           type: integer
-        monthly_installments:
-          description: "How many months without interest to apply, it can be 3, 6,\
-            \ 9, 12 or 18"
-          format: int8
-          type: integer
         type:
-          example: card
-          type: string
-        token_id:
-          example: tok_2897348234
+          example: cash
           type: string
         payment_source_id:
           example: src_2tLkkyfMPh6v7pFry
-          type: string
-        contract_id:
-          description: Optional id sent to indicate the bank contract for recurrent
-            card charges.
-          example: S781317595
           type: string
       required:
       - type
@@ -15711,9 +15041,7 @@ components:
       type: object
     customer_payment_methods_request:
       oneOf:
-      - $ref: '#/components/schemas/payment_method_card_request'
       - $ref: '#/components/schemas/payment_method_cash_request'
-      - $ref: '#/components/schemas/payment_method_spei_request'
       title: customer_payment_methods_request
     update_customer_antifraud_info:
       nullable: true
@@ -15865,55 +15193,6 @@ components:
           example: true
           nullable: true
           type: boolean
-      type: object
-    token_card:
-      nullable: true
-      properties:
-        cvc:
-          description: It is a value that allows identifying the security code of
-            the card.
-          example: "123"
-          maxLength: 4
-          type: string
-        device_fingerprint:
-          description: It is a value that allows identifying the device fingerprint.
-          example: zptcxk4p6w1ijwz85snf1l3bqe5g09ie
-          type: string
-        exp_month:
-          description: It is a value that allows identifying the expiration month
-            of the card.
-          example: "12"
-          maxLength: 2
-          type: string
-        exp_year:
-          description: It is a value that allows identifying the expiration year of
-            the card.
-          example: "26"
-          maxLength: 2
-          type: string
-        name:
-          description: It is a value that allows identifying the name of the cardholder.
-          example: Miguel
-          type: string
-        number:
-          description: It is a value that allows identifying the number of the card.
-          example: "4242424242424242"
-          type: string
-      required:
-      - cvc
-      - exp_month
-      - exp_year
-      - name
-      - number
-      type: object
-    token_checkout:
-      deprecated: true
-      nullable: true
-      properties:
-        returns_control_on:
-          description: It is a value that allows identifying the returns control on.
-          example: Token
-          type: string
       type: object
     details_error:
       properties:

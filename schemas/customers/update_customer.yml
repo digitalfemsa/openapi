@@ -59,9 +59,7 @@ properties:
     items:
       title: customer_payment_methods_request
       oneOf:
-        - $ref: ../../schemas/customers/payment_method_card_request.yml
         - $ref: ../../schemas/customers/payment_method_cash_request.yml
-        - $ref: ../../schemas/customers/payment_method_spei_request.yml
   shipping_contacts:
     description: Contains the detail of the shipping addresses that the client has active or has used in Conekta
     type: array
