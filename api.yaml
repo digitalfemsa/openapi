@@ -1,6 +1,6 @@
 openapi: "3.0.3"
 servers:
-  - url: https://api.femsa.io
+  - url: https://api.conekta.io
     description: Femsa main server
 info:
   description: Femsa sdk
