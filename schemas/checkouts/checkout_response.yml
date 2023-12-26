@@ -24,7 +24,7 @@ properties:
     format: int64
   failure_url:
     type: string
-    example: "https://pay.conekta.com/failure"
+    example: "https://pay.femsa.com/failure"
   id:
     type: string
     example: "b0bf16c4-18b9-445e-ba24-01604f329dbf"
@@ -70,11 +70,11 @@ properties:
     example:  "Issued"
   success_url:
     type: string
-    example: "https://pay.conekta.com/success"
+    example: "https://pay.femsa.com/success"
   type:
     type: string
     example: "PaymentLink"
   url:
     type: string
     format: uri
-    example: "https://pay.conekta.com/link/b0bf16c418b9445eba2401604f329dbf"
+    example: "https://pay.femsa.com/link/b0bf16c418b9445eba2401604f329dbf"

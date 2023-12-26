@@ -9,7 +9,7 @@ details:
         properties:
           code:
             type: string
-            example: conekta.errors.authentication.missing_key
+            example: femsa.errors.authentication.missing_key
           param:
             type: string
             nullable: true

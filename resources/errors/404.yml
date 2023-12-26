@@ -8,7 +8,7 @@ content:
         {
           message: "The resource was not found.",
           param:  null,
-          code:  "conekta.errors.resource_not_found.entity",
+          code:  "femsa.errors.resource_not_found.entity",
           debug_message: "The object Webhook \"641b1d5662d7e00001eaa46b\" could not be found.",
         }
       ]

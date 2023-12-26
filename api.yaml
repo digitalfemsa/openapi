@@ -1,15 +1,15 @@
 openapi: "3.0.3"
 servers:
-  - url: https://api.conekta.io
-    description: Conekta main server
+  - url: https://api.femsa.io
+    description: Femsa main server
 info:
-  description: Conekta sdk
+  description: Femsa sdk
   version: 2.1.0
   contact:
-    name: Engineering Conekta
-    url: https://github.com/conekta/openapi/issues
-    email: engineering@conekta.com
-  title: Conekta API
+    name: Engineering Femsa
+    url: https://github.com/femsa/femsa-openapi/issues
+    email: engineering@femsa.com
+  title: Femsa API
   license:
     name: MIT-LICENSE
     url: "https://www.apache.org/licenses/LICENSE-2.0.html"

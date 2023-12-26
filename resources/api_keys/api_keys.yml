@@ -26,10 +26,6 @@ get:
           schema:
             type: string
             example: "application/json; charset=utf-8"
-        Conekta-Media-Type:
-          schema:
-            type: string
-            example: conekta-v2.1.0; format=application/json
     401:
       $ref: "../errors/401.yml"
     500:
@@ -75,10 +71,6 @@ post:
           schema:
             type: string
             example: "application/json; charset=utf-8"
-        Conekta-Media-Type:
-          schema:
-            type: string
-            example: conekta-v2.1.0; format=application/json
     401:
       $ref: "../errors/401.yml"
     422:

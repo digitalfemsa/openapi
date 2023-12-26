@@ -7,7 +7,7 @@ content:
       details: [
         {
           message: "Unauthorized access service, please contact support team",
-          code: "conekta.errors.forbidden.authentication.invalid_whitelist_access",
+          code: "femsa.errors.forbidden.authentication.invalid_whitelist_access",
           debug_message: "Unauthorized access to whitelists service, please contact support team",
         }
       ]

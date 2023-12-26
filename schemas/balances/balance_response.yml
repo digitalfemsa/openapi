@@ -14,7 +14,7 @@ properties:
       $ref: './balance_common_field.yml'
   conekta_retention:
     type: array
-    description: The balance's conekta retention
+    description: The balance's Femsa retention
     items:
       $ref: './balance_common_field.yml'
   gateway:

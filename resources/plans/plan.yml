@@ -31,10 +31,6 @@ get:
           schema:
             type: string
             example: "keep-alive"
-        Conekta-Media-Type:
-          schema:
-            type: string
-            example: conekta-v2.1.0; format=application/json
     422:
      $ref: '../errors/422.yml'
     401:
@@ -82,10 +78,6 @@ put:
           schema:
             type: string
             example: "keep-alive"
-        Conekta-Media-Type:
-          schema:
-            type: string
-            example: conekta-v2.1.0; format=application/json
     422:
      $ref: '../errors/422.yml'
     401:
@@ -135,10 +127,6 @@ delete:
           schema:
             type: string
             example: "keep-alive"
-        Conekta-Media-Type:
-          schema:
-            type: string
-            example: conekta-v2.1.0; format=application/json
     422:
      $ref: '../errors/422.yml'
     401:

@@ -8,7 +8,7 @@ content:
         {
           message: "The name does not exist.",
           param:  "payment_method.name",
-          code:  "conekta.errors.parameter_validation.payment_method.name.nonexistent_token",
+          code:  "femsa.errors.parameter_validation.payment_method.name.nonexistent_token",
           debug_message: "The name does not exist."
         }
       ]

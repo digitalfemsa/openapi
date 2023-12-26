@@ -9,7 +9,7 @@ content:
               {
                   "debug_message": "The \"custom_field\" parameter is not allowed",
                   "message": "El parametro \"custom_field\" no está permitido",
-                  "code": "conekta.errors.parameter_validation.whitelist"
+                  "code": "femsa.errors.parameter_validation.whitelist"
               }
           ],
           "object": "error",

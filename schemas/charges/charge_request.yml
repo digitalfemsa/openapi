@@ -11,7 +11,7 @@ properties:
       - type
     type: object
     description: |
-          Payment method used in the charge. Go to the [payment methods](https://developers.conekta.com/reference/m%C3%A9todos-de-pago) section for more details
+          Payment method used in the charge. Go to the [payment methods](https://developers.femsa.com/reference/m%C3%A9todos-de-pago) section for more details
     properties:
       expires_at:
         type: integer

@@ -92,7 +92,6 @@ properties:
           additionalProperties:
             type: string
           example: {
-              "Accept": "application/vnd.conekta-v2.1.0+json",
               "Accept-Encoding": "gzip, deflate, br",
               "Accept-Language": "es-419, es; q=0.9, en; q=0.8",
               "Activitypermission": "orders:read",
@@ -109,7 +108,6 @@ properties:
               "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS",
               "Access-Control-Allow-Origin": "*",
               "Access-Control-Max-Age": "1728000",
-              "Conekta-Media-Type": "conekta-v2.1.0; format=application/json",
               "Content-Type": "application/json; charset=utf-8",
               "Referrer-Policy": "strict-origin-when-cross-origin",
               "Strict-Transport-Security": "max-age=31536000; includeSubDomains",

@@ -105,7 +105,7 @@ properties:
         example: "HostedPayment"
       url:
         type: string
-        example: "https://pay.stg.conekta.io/checkout/6fca054a85194c43971ecea35cc519bb"
+        example: "https://pay.stg.femsa.io/checkout/6fca054a85194c43971ecea35cc519bb"
   created_at:
     type: integer
     example: 1676328434
@@ -168,7 +168,7 @@ properties:
         description: "Metadata associated with the fiscal entity"
       name: 
         type: string
-        example: "Conekta Inc"
+        example: "Femsa Inc"
         nullable: true
         description: "Name of the fiscal entity"
       tax_id:
@@ -241,8 +241,8 @@ properties:
           url:
             type: string
             format: uri
-            description: pay.conekta.com/{id} Indicates the url of the Conekta component to authenticate the flow through 3DS2.
-            example: https://pay.conekta.com/6fca054a85194c43971ecea35cc519bb
+            description: pay.femsa.com/{id} Indicates the url of the Femsa component to authenticate the flow through 3DS2.
+            example: https://pay.femsa.com/6fca054a85194c43971ecea35cc519bb
           return_url:
             type: string
             format: uri

@@ -42,10 +42,6 @@ get:
           schema:
             type: string
             example: "keep-alive"
-        Conekta-Media-Type:
-          schema:
-            type: string
-            example: conekta-v2.1.0; format=application/json
     401:
      $ref: '../errors/401.yml'
     500:

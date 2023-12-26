@@ -9,7 +9,7 @@ content:
           debug_message: "The order cannot be modified because it has already a charge which is pending payment.",
           message: "The order cannot be modified because it has already a charge which is pending payment.",
           param: null,
-          code: "conekta.errors.precondition_required.combo.order.cannot_be_updated_because_has_charge"
+          code: "femsa.errors.precondition_required.combo.order.cannot_be_updated_because_has_charge"
         }
       ]
       log_id: "641b6e233cd9a50001515039"

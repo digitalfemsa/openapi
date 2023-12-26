@@ -1,7 +1,7 @@
 {
   "uuid": "943a2338-d604-479d-bc22-ea615b7bb3e7",
   "lastMigration": 25,
-  "name": "Conekta API",
+  "name": "femsa API",
   "endpointPrefix": "",
   "latency": 0,
   "port": 3000,

@@ -12,7 +12,7 @@ properties:
   email:
     type: string
     format: email
-    example: test@conekta.com
+    example: test@femsa.com
   phone:
     type: string
     example: "5522997233"

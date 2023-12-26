@@ -2,7 +2,7 @@ description: requested field for customer payment methods
 content:
   application/json:
     schema:  
-      description: Contains details of the payment methods that the customer has active or has used in Conekta
+      description: Contains details of the payment methods that the customer has active or has used in Femsa
       oneOf:
         - $ref: ../../schemas/customers/payment_method_cash_request.yml
     examples:

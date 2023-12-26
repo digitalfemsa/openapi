@@ -6,10 +6,10 @@ content:
     example:
       details: [
         {
-            "debug_message": "There was a runtime error and Conekta engineers have been notified.",
-            "message": "There was a runtime error and Conekta engineers have been notified.",
+            "debug_message": "There was a runtime error and Femsa engineers have been notified.",
+            "message": "There was a runtime error and Femsa engineers have been notified.",
             "param": null,
-            "code": "conekta.errors.api.system.general_failure"
+            "code": "femsa.errors.api.system.general_failure"
         }
         ]
       object: "error"

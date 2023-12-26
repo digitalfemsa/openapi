@@ -1,4 +1,4 @@
-description: Contains the detail of the shipping addresses that the client has active or has used in Conekta
+description: Contains the detail of the shipping addresses that the client has active or has used in Femsa
 properties:
   phone:
     type: string

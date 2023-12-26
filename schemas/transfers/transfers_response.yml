@@ -69,7 +69,7 @@ properties:
     description: "Object name, which is transfer."
   statement_description:
     type: string
-    example: "Conekta 4401234"
+    example: "Femsa 4401234"
     description: "Description of the transfer."
   statement_reference:
     type: string

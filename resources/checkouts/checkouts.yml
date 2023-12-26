@@ -41,10 +41,6 @@ get:
           schema:
             type: string
             example: "keep-alive"
-        Conekta-Media-Type:
-          schema:
-            type: string
-            example: conekta-v2.1.0; format=application/json
     401:
      $ref: '../errors/401.yml'
     402: 
@@ -95,11 +91,6 @@ post:
           schema:
             type: string
             example: "keep-alive"
-        Conekta-Media-Type:
-          description: The version of the API used to process the request and the format of the response body
-          schema:
-            type: string
-            example: conekta-v2.1.0; format=application/json
     401:
      $ref: '../errors/401.yml'
     402: 

@@ -8,6 +8,6 @@ content:
       properties:
         email: 
           type: string
-          example: "example@conekta.com"
+          example: "example@femsa.com"
           format: email
 required: true

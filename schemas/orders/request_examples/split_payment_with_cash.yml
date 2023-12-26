@@ -13,7 +13,7 @@ value:
   currency: MXN
   customer_info:
     name: DevTest
-    email: test@conekta.com
+    email: test@femsa.com
     phone: '5522997233'
     corporate: false
   line_items:

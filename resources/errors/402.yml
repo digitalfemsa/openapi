@@ -7,7 +7,7 @@ content:
       details: [
         {
           message: "The order could not be processed.",
-          code: "conekta.errors.processing.order.used",
+          code: "femsa.errors.processing.order.used",
           debug_message: "The order has already been used.",
         }
       ]
