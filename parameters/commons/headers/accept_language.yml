@@ -1,0 +1,18 @@
+in: header
+name: "Accept-Language"
+description: Use for knowing which language to use
+required: false
+schema:
+  default: "es"
+  type: string
+  enum: [ 
+    "es", 
+    "en"
+  ]
+examples:
+  "es":
+    summary: for spanish request/response
+    value:  "es"
+  "en":
+    summary: for english request/response
+    value:  "en"

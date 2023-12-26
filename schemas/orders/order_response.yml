@@ -1,0 +1,300 @@
+title: order_response
+description: "order response"
+properties:
+  amount:
+    type: integer
+    example: 21605
+    description: "The total amount to be collected in cents"
+  amount_refunded:
+    type: integer
+    example: 0
+    description: "The total amount refunded in cents"
+  channel:
+    type: object
+    properties:
+      segment:
+        type: string
+        example: "Checkout"
+      checkout_request_id:
+        type: string
+        example: "6fca054a-8519-4c43-971e-cea35cc519bb"
+      checkout_request_type:
+        type: string
+        example: "HostedPayment"
+      id:
+        type: string
+        example: "channel_2tNDzhA4Akmzj11AU"
+  charges:
+    description: "The charges associated with the order"
+    allOf:
+      - $ref: ../pagination/pagination.yml
+      - type: object
+        properties:
+          data:
+            type: array
+            items:
+              title: charges_data_response
+              allOf:
+                - $ref: ../../schemas/charges/charge_response.yml
+  checkout:
+    type: object
+    properties:
+      allowed_payment_methods:
+        type: array
+        items:
+          type: string
+      can_not_expire:
+        type: boolean
+        example: false
+      emails_sent:
+        type: integer
+        example: 0
+      exclude_card_networks:
+        type: array
+        items: {}
+      expires_at:
+        type: integer
+        example: 1676613599
+        format: int64
+      failure_url:
+        type: string
+        example: "http://187.216.228.66:2222/SysVentasPagos/Acceso.aspx"
+      force_3ds_flow:
+        type: boolean
+        example: false
+      id:
+        type: string
+        example:  "6fca054a-8519-4c43-971e-cea35cc519bb"
+      is_redirect_on_failure:
+        type: boolean
+        example: false
+      livemode:
+        type: boolean
+        example: false
+      metadata:
+        additionalProperties: true
+        maxProperties: 100
+        type: object
+      monthly_installments_enabled:
+        type: boolean
+        example: false
+      monthly_installments_options:
+        type: array
+        items:
+          type: integer
+          format: int8
+      name:
+        type: string
+        example: "ord-2tNDzhA4Akmzj11AS"
+      needs_shipping_contact:
+        type: boolean
+        example: false
+      object:
+        type: string
+        example: "checkout"
+      on_demand_enabled:
+        type: boolean
+        example: true
+        nullable: true
+      paid_payments_count:
+        type: integer
+        example: 0
+      recurrent:
+        type: boolean
+        example: false
+      slug:
+        type: string
+        example:  "6fca054a85194c43971ecea35cc519bb"
+      sms_sent: 
+        type: integer
+        example: 0
+      success_url:
+        type: string
+        example: "http://187.216.228.66:2222/SysVentasPagos/Acceso.aspx"
+      starts_at:
+        type: integer
+        example: 1676354400
+      status:
+        type: string
+        example: "Issued"
+      type:
+        type: string
+        example: "HostedPayment"
+      url:
+        type: string
+        example: "https://pay.stg.conekta.io/checkout/6fca054a85194c43971ecea35cc519bb"
+  created_at:
+    type: integer
+    example: 1676328434
+    format: int64
+    description: "The time at which the object was created in seconds since the Unix epoch"
+  currency:
+    type: string
+    example: "MXN"
+    description: "The three-letter ISO 4217 currency code. The currency of the order."
+  customer_info:
+    allOf:
+      - type: object
+        properties:
+          object:
+            type: string
+            example: "customer_info"
+      - $ref: order_customer_info_response.yml
+      - $ref: ../customers/customer_info_just_customer_id_response.yml
+  discount_lines:
+    allOf:
+      - $ref: ../pagination/pagination.yml
+      - type: object
+        properties:
+          data:
+            type: array
+            items:
+              title: discount_lines_data_response
+              allOf:
+                - $ref: ../../schemas/orders/discount_lines_response.yml
+  fiscal_entity:
+    type: object
+    title: order_fiscal_entity_response
+    nullable: true
+    description: "Fiscal entity of the order, Currently it is a purely informative field"
+    required:
+      - address
+      - id
+      - object
+      - created_at
+    properties:
+      address:
+        title: order_fiscal_entity_address_response
+        description: "Address of the fiscal entity"
+        allOf:
+          - $ref: fiscal_entity_address.yml
+          - type: object
+            properties:
+              object:
+                type: string
+                example: "fiscal_entity_address"
+      email:
+        type: string
+        example: "test@gmail.com"
+        description: "Email of the fiscal entity"
+        nullable: true
+      metadata:
+        type: object
+        additionalProperties: true
+        maxProperties: 100
+        description: "Metadata associated with the fiscal entity"
+      name: 
+        type: string
+        example: "Conekta Inc"
+        nullable: true
+        description: "Name of the fiscal entity"
+      tax_id:
+        type: string
+        example: "324234234"
+        description: "Tax ID of the fiscal entity"
+        nullable: true
+      id:
+        type: string
+        example: "fis_ent_2tN85VYaSMyDvjB3M"
+        description: "ID of the fiscal entity"
+      created_at:
+        type: integer
+        format: int64
+        example: 1676328434
+        description: "The time at which the object was created in seconds since the Unix epoch"
+      object:
+        type: string
+        example: "fiscal_entity"
+      phone:
+        type: string
+        example: "+525511223344"
+        description: "Phone of the fiscal entity"
+        nullable: true
+  id:
+    type: string
+    example: "ord_2tMtQQpDvfnNjiuFG"
+  is_refundable:
+    type: boolean
+    example: false
+  line_items:
+    title: order_response_products
+    allOf:
+      - $ref: ../pagination/pagination.yml
+      - $ref: ../pagination/page.yml
+      - type: object
+        properties:
+          data:
+            type: array
+            items:
+              title: product_data_response
+              allOf:
+                - $ref: product.yml
+                - type: object
+                  properties:
+                    id: 
+                      type: string
+                    object:
+                      type: string
+                    parent_id:
+                      type: string
+  livemode:
+    type: boolean
+    example: false
+    description: "Whether the object exists in live mode or test mode"
+  metadata:
+    additionalProperties: true
+    maxProperties: 100
+    type: object
+    description: "Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+  next_action:
+    title: order_next_action_response
+    type: object
+    description: contains the following attributes that will guide to continue the flow
+    properties:
+      redirect_to_url:
+        type: object
+        description: contains the following attributes that will guide to continue the flow
+        properties:
+          url:
+            type: string
+            format: uri
+            description: pay.conekta.com/{id} Indicates the url of the Conekta component to authenticate the flow through 3DS2.
+            example: https://pay.conekta.com/6fca054a85194c43971ecea35cc519bb
+          return_url:
+            type: string
+            format: uri
+            description: Indicates the url to which the 3DS2 flow returns at the end, when the integration is redirected.
+            example: https://my-website.com"
+      type:
+        type: string
+        example: "redirect_to_url"
+        description: Indicates the type of action to be taken
+  object:
+    type: string
+    example: "order"
+    description: "String representing the object’s type. Objects of the same type share the same value."
+  payment_status:
+    type: string
+    example: "paid"
+    description: "The payment status of the order."
+  processing_mode:
+    type: string
+    description: "Indicates the processing mode for the order, either ecommerce, recurrent or validation."
+    example: "ecommerce"
+  shipping_contact:
+    allOf:
+      - type: object
+        properties:
+          created_at:
+            type: integer
+            format: int64
+          id:
+            type: string
+          object:
+            type: string
+      - $ref: ../../schemas/customers/customer_shipping_contacts_response.yml
+  updated_at:
+    type: integer
+    example: 1676328434
+    format: int64
+    description: "The time at which the object was last updated in seconds since the Unix epoch"

@@ -1,0 +1,22 @@
+title: order_discount_lines_request
+name: order_discount_lines_request
+description: "List of discounts that apply to the order."
+required:
+  - amount
+  - code
+  - type
+properties:
+  amount:
+    type: integer
+    format: int64
+    example: 500
+    minimum: 0
+    description: "The amount to be deducted from the total sum of all payments, in cents."
+  code:
+    type: string
+    description: "Discount code."
+    example: "123"
+  type:
+    type: string
+    example: "loyalty"
+    description: "It can be 'loyalty', 'campaign', 'coupon' o 'sign'"

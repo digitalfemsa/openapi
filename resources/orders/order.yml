@@ -1,0 +1,64 @@
+post:
+  tags:
+    - Orders
+  operationId: createOrder
+  summary: Create order
+  description: 'Create a new order.'
+  responses:
+    200:
+      description: successful operation
+      content:
+        application/vnd.conekta-v2.1.0+json:
+          schema:
+              $ref: ../../schemas/orders/order_response.yml
+          examples:
+            cash:
+              $ref: ../../schemas/orders/examples/order_cash.yml
+            card:
+              $ref: ../../schemas/orders/examples/order_card.yml
+    422:
+     $ref: '../errors/422.yml'
+    401:
+     $ref: '../errors/401.yml'
+    402:
+     $ref: '../errors/402.yml'
+    500:
+     $ref: '../errors/500.yml'
+  security:
+    - bearerAuth: []
+  requestBody:
+    $ref: '../../requestBodies/orders/order.yml'
+  parameters:
+    - $ref: '../../parameters/commons/headers/accept_language.yml'
+    - $ref: '../../parameters/commons/headers/x_child_company_id.yml'
+get:
+  tags:
+    - Orders
+  operationId: getOrders
+  summary: Get a list of Orders
+  description: 'Get order details in the form of a list'
+  responses:
+    200:
+      description: successful operation
+      content:
+        application/vnd.conekta-v2.1.0+json:
+          schema:
+            title: "get_orders_response"
+            allOf:
+             - $ref: ../../schemas/orders/orders_response.yml
+             - $ref: ../../schemas/pagination/pagination.yml
+             - $ref: ../../schemas/pagination/page.yml
+    401:
+     $ref: '../errors/401.yml'
+    500:
+     $ref: '../errors/500.yml'
+
+  security:
+    - bearerAuth: []
+  parameters:
+    - $ref: '../../parameters/commons/headers/accept_language.yml'
+    - $ref: '../../parameters/commons/headers/x_child_company_id.yml'
+    - $ref: '../../parameters/commons/query/limit.yml'
+    - $ref: '../../parameters/commons/query/search.yml'
+    - $ref: '../../parameters/commons/query/next_page.yml'
+    - $ref: '../../parameters/commons/query/previous_page.yml'

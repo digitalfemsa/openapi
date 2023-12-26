@@ -1,0 +1,20 @@
+title: fiscal_entity_request
+required:
+  - address
+properties:
+  address:
+    allOf:
+      - $ref: ./customer_address.yml
+  tax_id:
+    type: string
+  email:
+    type: string
+  phone:
+    type: string
+  metadata:
+    type: object
+    additionalProperties:
+      type: object
+  company_name:
+    type: string
+    example: "conekta"

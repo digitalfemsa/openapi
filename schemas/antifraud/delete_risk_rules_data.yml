@@ -1,0 +1,6 @@
+type: object
+properties:
+  id:
+    type: string
+    example: '2fw8EWJusiRrxdPzT'
+    description: 'rule id to be deleted'

@@ -1,0 +1,41 @@
+title: order_checkout_request
+description: |
+  [Checkout](https://developers.conekta.com/v2.1.0/reference/payment-link) details
+required:
+  - allowed_payment_methods
+properties:
+  allowed_payment_methods:
+    type: array
+    description: "Are the payment methods available for this link"
+    items:
+      type: string
+    example: [ "cash", "card", "bank_transfer"]
+  expires_at:
+    type: integer
+    format: int64
+    description: "Unix timestamp of checkout expiration"
+  failure_url: 
+    type: string
+    description: "Redirection url back to the site in case of failed payment, applies only to HostedPayment."
+  monthly_installments_enabled:
+    type: boolean
+    example: false
+  monthly_installments_options:
+    type: array
+    items:
+      type: integer
+      format: int8
+    example: [3,6,12]
+  name:
+    type: string
+    description: "Reason for payment"
+  on_demand_enabled:
+    type: boolean
+    example: true
+  success_url:
+    type: string
+    description: "Redirection url back to the site in case of successful payment, applies only to HostedPayment"
+  type:
+    type: string
+    description: "This field represents the type of checkout"
+    example: "Integration"

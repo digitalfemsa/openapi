@@ -1,0 +1,43 @@
+post:
+  tags:
+    - Orders
+  operationId: ordersCreateCapture
+  description: Processes an order that has been previously authorized.
+  summary: Capture Order
+  responses:
+    200:
+      description: successful
+      content:
+        application/vnd.conekta-v2.1.0+json:
+          schema:
+            $ref: ../../schemas/orders/order_response.yml
+    401:
+     $ref: '../errors/401.yml'
+    404:
+     $ref: '../errors/404.yml'
+    428:
+     $ref: '../errors/428.yml'
+    500:
+     $ref: '../errors/500.yml'
+  security:
+    - bearerAuth: []
+  requestBody:
+    description: requested fields for capture order
+    content:
+      application/json:
+        schema:
+          title: order_capture_request
+          required:
+            - amount
+          properties:
+            amount:
+              type: integer
+              format: int64
+              example: 500
+              description: Amount to capture
+              minimum: 1
+              nullable: false
+  parameters:
+    - $ref: '../../parameters/commons/path_param/id.yml'
+    - $ref: '../../parameters/commons/headers/accept_language.yml'
+    - $ref: '../../parameters/commons/headers/x_child_company_id.yml'

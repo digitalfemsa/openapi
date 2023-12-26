@@ -1,0 +1,22 @@
+title:  customer_info
+type: object
+required:
+  - name
+  - phone
+  - email
+properties:
+  name:
+    type: string
+    example: "DevTest"
+  email:
+    type: string
+    format: email
+    example: test@conekta.com
+  phone:
+    type: string
+    example: "5522997233"
+  corporate:
+    type: boolean
+  object:
+    type: string
+    example: "customer_info"

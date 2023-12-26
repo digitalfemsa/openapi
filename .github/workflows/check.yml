@@ -1,0 +1,35 @@
+name: Check API YAML Modification on Pull Request
+
+on:
+  pull_request:
+    branches: [ main ]
+    types: [ opened, synchronize ]
+
+jobs:
+  generate-client:
+    runs-on: ubuntu-latest
+    name: openapi
+    steps:
+
+      # Checkout your code
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Generate your OpenAPI document (if you don't write it manually)
+
+      # Use the action to generate a client package
+      # This uses the default path for the openapi document and thus assumes there is an openapi.json in the current workspace.
+      - name: Generate Client
+        uses: openapi-generators/openapitools-generator-action@v1
+        with:
+          generator: openapi-yaml
+          openapi-file: api.yaml
+          generator-tag: v7.2.0
+      - name: check if api.yaml are equals
+        run: |
+          if diff -q _build/api.yaml openapi-yaml-client/openapi/openapi.yaml >/dev/null; then
+            echo "files are equals"
+          else
+            echo "exists differences between files _build/api.yaml"
+            exit 1
+          fi

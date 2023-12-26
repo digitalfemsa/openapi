@@ -1,0 +1,69 @@
+title: subscription_response
+description: subscription model
+type: object
+properties:
+  billing_cycle_start:
+    type: integer
+    example: 1677626827
+    format: int64
+    nullable: true
+  billing_cycle_end:
+    type: integer
+    example: 1677626827
+    format: int64
+    nullable: true
+  canceled_at:
+    type: integer
+    example: 1678258162
+    format: int64
+    nullable: true
+  card_id:
+    type: string
+    example: "src_2tKcHxhTz7xU5SymL"
+  charge_id:
+    type: string
+    example: "2tKcHxhTz7xU5SymL"
+    nullable: true
+  created_at:
+    type: integer
+    example: 1677626837
+    format: int64
+  customer_custom_reference:
+    type: string
+    example: "dotnet_123456"
+  customer_id:
+    type: string
+    example: "cus_2tKcHxhTz7xU5SymF"
+  id:
+    type: string
+    example: "gold-plan"
+  last_billing_cycle_order_id:
+    type: string
+    example: "ord_2tSoMP7bZJbLiq4z8"
+  object:
+    type: string
+    example: "subscription"
+  paused_at:
+    type: integer
+    example: 1678258162
+    format: int64
+    nullable: true
+  plan_id:
+    type: string
+    example: "plan_2tXx672QLQ68CkmMn"
+  status:
+    type: string
+    example: "past_due"
+  subscription_start:
+    type: integer
+    example: 1677626837
+  trial_start:
+    type: integer
+    example: 1677626837
+    format: int64
+    nullable: true
+  trial_end:
+    type: integer
+    example: 1677626837
+    nullable: true
+    format: int64

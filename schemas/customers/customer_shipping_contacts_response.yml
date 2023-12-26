@@ -1,0 +1,63 @@
+description: Contains the detail of the shipping addresses that the client has active or has used in Conekta
+properties:
+  phone:
+    type: string
+    example:  "+525511223344"
+  receiver:
+    type: string
+    example:   "Marvin Fuller"
+  between_streets: 
+    type: string
+    example: "Ackerman Crescent"
+    nullable: true
+  address: 
+    type: object
+    properties:
+      object:
+        type: string
+        example: "shipping_address"
+      street1:
+        type: string
+        example: Nuevo Leon 254
+      street2: 
+        type: string
+        example: Departamento 404
+      postal_code:
+        type: string
+        example: "06100"
+      city: 
+        type: string
+        example: "Ciudad de Mexico"
+      state:
+        type: string
+        example: "Ciudad de Mexico"
+      country:
+        type: string
+        example: MX
+      residential:
+        type: boolean
+        example: true
+        nullable: true
+  parent_id:
+    type: string
+  default:
+    type: boolean
+    example: false
+  id:
+    type: string
+    example: "adr_1234567890"
+  created_at:
+    type: integer
+    format: int64
+    example: 1675715413
+  metadata:
+    type: object
+    additionalProperties: true
+    maxProperties: 100
+    description: "Metadata associated with the shipping contact"
+  object:
+    type: string
+    example: "shipping_contact"
+  deleted:
+    type: boolean
+    example: false

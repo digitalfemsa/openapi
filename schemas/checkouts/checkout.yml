@@ -1,0 +1,90 @@
+title: checkout_request
+description: "It is a sub-resource of the Order model that can be stipulated in order to configure its corresponding checkout"
+type: object
+required:
+  - allowed_payment_methods
+  - name
+  - type
+  - order_template
+  - recurrent
+  - expires_at
+properties:
+  allowed_payment_methods:
+    type: array
+    items:
+      type: string
+    example: [ "cash", "card", "bank_transfer"]
+    description: "Those are the payment methods that will be available for the link"
+  expires_at:
+    type: integer
+    example: 1680397724
+    format: int64
+    description: |
+        It is the time when the link will expire. It is expressed in seconds since the Unix epoch.
+        The valid range is from 2 to 365 days (the valid range will be taken from the next day of the creation date at 00:01 hrs)
+  monthly_installments_enabled:
+    type: boolean
+    example: true
+    description: "This flag allows you to specify if months without interest will be active."
+  monthly_installments_options:
+    description: "This field allows you to specify the number of months without interest."
+    type: array
+    items:
+      type: integer
+      format: int8
+    example: [3,6,12]
+  name:
+    type: string
+    description: Reason for charge
+    example:  Payment Link Name 1594138857
+  needs_shipping_contact:
+    type: boolean
+    example: false
+    description:  "This flag allows you to fill in the shipping information at checkout."
+  on_demand_enabled:
+    type: boolean
+    example: true
+    nullable: true
+    description: "This flag allows you to specify if the link will be on demand."
+  order_template:
+    description: "It maintains the attributes with which the order will be created when receiving a new payment."
+    type: object
+    required:
+      - currency
+      - line_items
+    properties:
+      currency:
+        type: string
+        example: "MXN"
+        maxLength: 3
+        description: "It is the currency in which the order will be created. It must be a valid ISO 4217 currency code."
+      customer_info:
+        description: "It is the information of the customer who will be created when receiving a new payment."
+        oneOf:
+          - $ref: ../customers/customer_info.yml
+          - $ref: ../customers/customer_info_just_customer_id.yml
+      line_items:
+        description: They are the products to buy. Each contains the "unit price" and "quantity" parameters that are used to calculate the total amount of the order.
+        type: array
+        items:
+          $ref: ../../schemas/orders/product.yml
+      metadata:
+        type: object
+        additionalProperties: true
+        example: { "key": "value" }
+        maxProperties: 100
+        description: "It is a set of key-value pairs that you can attach to the order. It can be used to store additional information about the order in a structured format."
+  payments_limit_count:
+    type: integer
+    format: int8
+    example: 5
+    description: "It is the number of payments that can be made through the link."
+  recurrent:
+    type: boolean
+    example: false
+    description: "false: single use. true: multiple payments"
+  type:
+    type: string
+    example: "PaymentLink"
+    description: "It is the type of link that will be created. It must be a valid type."
+  

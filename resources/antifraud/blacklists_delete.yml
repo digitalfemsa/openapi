@@ -1,0 +1,39 @@
+delete:
+  summary: Delete blacklisted rule
+  tags:
+    - Antifraud
+  operationId: DeleteRuleBlacklist
+  parameters:
+    - $ref: '../../parameters/commons/path_param/id.yml'
+    - $ref: '../../parameters/commons/headers/accept_language.yml'
+    - $ref: '../../parameters/commons/headers/x_child_company_id.yml'
+  responses:
+    200:
+      description: successfully deleted rule
+      content:
+        application/vnd.conekta-v2.1.0+json:
+          schema:
+            title: deleted_blacklist_rule_response
+            properties:
+              id:
+                type: string
+                example: '2fw8EWJusiRrxdPzT'
+                description: 'Blacklist rule id'
+              field:
+                type: string
+                example: 'email'
+                description: 'field used for blacklists rule deleted'
+              value:
+                type: string
+                example: 'email@example.com'
+                description: 'value used for blacklists rule deleted'
+              description:
+                type: string
+                example: 'banned customer example@example.com'
+                description: 'use an description for blacklisted rule'
+    401:
+     $ref: '../errors/401.yml'
+    404:
+     $ref: '../errors/404.yml'
+    500:
+     $ref: '../errors/500.yml'

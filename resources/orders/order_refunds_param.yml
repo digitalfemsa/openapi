@@ -1,0 +1,31 @@
+post:
+  tags:
+    - Orders
+  operationId: orderRefund
+  description: A refunded order describes the items, amount, and reason an order is being refunded.
+  summary: Refund Order
+  responses:
+    200:
+      description: successful
+      content:
+        application/vnd.conekta-v2.1.0+json:
+          schema:
+            $ref: ../../schemas/orders/order_response.yml
+    401:
+     $ref: '../errors/401.yml'
+    402:
+     $ref: '../errors/402.yml'
+    404:
+     $ref: '../errors/404.yml'
+    422:
+     $ref: '../errors/422.yml'
+    500:
+     $ref: '../errors/500.yml'
+  security:
+    - bearerAuth: []
+  requestBody:
+   $ref: '../../requestBodies/orders/order_refunds_request.yml'
+  parameters:
+    - $ref: '../../parameters/commons/path_param/id.yml'
+    - $ref: '../../parameters/commons/headers/accept_language.yml'
+    - $ref: '../../parameters/commons/headers/x_child_company_id.yml'
