@@ -90,10 +90,6 @@ paths:
     $ref: "./resources/customers/create_customer_payment_methods.yml"
   /customers/{id}/payment_sources/{payment_method_id}:
     $ref: "./resources/customers/update_customer_payment_methods.yml"
-  /plans:
-    $ref: "./resources/plans/plans.yml"
-  /plans/{id}:
-    $ref: "./resources/plans/plan.yml"
   /orders/{id}/shipping_lines:
     $ref: "./resources/orders/order_shipping_param.yml"
   /orders/{id}/shipping_lines/{shipping_id}:
@@ -102,16 +98,6 @@ paths:
     $ref: "./resources/customers/create_customer_shipping_contacts.yml"
   /customers/{id}/shipping_contacts/{shipping_contacts_id}:
     $ref: "./resources/customers/update_customer_shipping_contacts.yml"
-  /customers/{id}/subscription:
-    $ref: "./resources/subscriptions/subscriptions.yml"
-  /customers/{id}/subscription/cancel:
-    $ref: "./resources/subscriptions/subscriptions_cancel.yml"
-  /customers/{id}/subscription/events:
-    $ref: "./resources/subscriptions/subscriptions_events.yml"
-  /customers/{id}/subscription/pause:
-    $ref: "./resources/subscriptions/subscriptions_pause.yml"
-  /customers/{id}/subscription/resume:
-    $ref: "./resources/subscriptions/subscriptions_resume.yml"
   /orders/{id}/tax_lines:
     $ref: "./resources/orders/order_tax_param.yml"
   /orders/{id}/tax_lines/{tax_id}:
