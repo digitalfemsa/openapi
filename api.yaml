@@ -1,13 +1,13 @@
 openapi: "3.0.3"
 servers:
-  - url: https://api.conekta.io
+  - url: https://api.digitalfemsa.io
     description: Femsa main server
 info:
   description: Femsa sdk
   version: 2.1.0
   contact:
     name: Engineering Femsa
-    url: https://github.com/femsa/femsa-openapi/issues
+    url: https://github.com/digitalfemsa/openapi/issues
     email: engineering@femsa.com
   title: Femsa API
   license:
