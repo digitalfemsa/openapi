@@ -1,4 +1,4 @@
-API_README_VERSION_ID = xxxxxx
+API_README_VERSION_ID = 65e0b0141ffb9700258fc045
 merge:
 	docker run --rm \
 	-v ${PWD}:/local openapitools/openapi-generator-cli:v7.2.0 generate \
