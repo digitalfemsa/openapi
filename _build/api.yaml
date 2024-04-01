@@ -3,7 +3,7 @@ info:
   contact:
     email: engineering@femsa.com
     name: Engineering Femsa
-    url: https://github.com/femsa/femsa-openapi/issues
+    url: https://github.com/digitalfemsa/openapi/issues
   description: Femsa sdk
   license:
     name: MIT-LICENSE
@@ -12,7 +12,7 @@ info:
   version: 2.1.0
 servers:
 - description: Femsa main server
-  url: https://api.conekta.io
+  url: https://api.digitalfemsa.io
 security:
 - bearerAuth: []
 paths:
