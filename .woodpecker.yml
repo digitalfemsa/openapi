@@ -1,0 +1,38 @@
+when:
+  - event: [pull_request, push]
+    branch:
+      - main
+
+steps:
+  - name: build_image
+    image: woodpeckerci/plugin-docker-buildx
+    settings:
+      logins:
+        - registry: 348781328318.dkr.ecr.us-east-1.amazonaws.com
+          aws_region: us-east-1
+          aws_access_key_id:
+            from_secret: aws_access_key_id
+          aws_secret_access_key:
+            from_secret: aws_secret_access_key
+      dockerfile: Dockerfile
+      platforms: linux/amd64
+      ecr_create_repository: "true"
+      tags:
+        - "${CI_PIPELINE_NUMBER}"
+      repo: 348781328318.dkr.ecr.us-east-1.amazonaws.com/${CI_REPO}
+      target: builder
+      debug: true
+      build_args:
+        - GP_TOKEN
+        - GP_USER
+      build_args_from_env:
+        - SSH_KEY
+    secrets: [GP_TOKEN, GP_USER, aws_access_key_id, aws_secret_access_key,SSH_KEY]
+  - name: validate
+    image: 348781328318.dkr.ecr.us-east-1.amazonaws.com/${CI_REPO}:${CI_PIPELINE_NUMBER}
+    commands:
+      - openapi-generator-cli validate -i api.yaml
+  - name: dummy-generator
+    image: 348781328318.dkr.ecr.us-east-1.amazonaws.com/${CI_REPO}:${CI_PIPELINE_NUMBER}
+    commands:
+      - openapi-generator-cli generate -i api.yaml -g openapi-yaml
