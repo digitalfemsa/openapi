@@ -1,4 +1,4 @@
-FROM node:14 as builder
+FROM node:16 as builder
 
 # Install OpenJDK-11
 RUN apt-get update && \
@@ -13,6 +13,5 @@ COPY parameters/ parameters/
 COPY requestBodies  requestBodies/
 COPY resources resources/
 COPY schemas schemas/
-COPY templates templates/
 COPY Makefile Makefile
 COPY api.yaml api.yaml
