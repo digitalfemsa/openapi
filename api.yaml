@@ -14,14 +14,6 @@ info:
     name: MIT-LICENSE
     url: "https://www.apache.org/licenses/LICENSE-2.0.html"
 paths:
-  /antifraud/whitelists:
-    $ref: "./resources/antifraud/whitelists_index_create.yml"
-  /antifraud/whitelists/{id}:
-    $ref: "./resources/antifraud/whitelists_delete.yml"
-  /antifraud/blacklists:
-    $ref: "./resources/antifraud/blacklists_index_create.yml"
-  /antifraud/blacklists/{id}:
-    $ref: "./resources/antifraud/blacklists_delete.yml"
   /api_keys:
     $ref: "./resources/api_keys/api_keys.yml"
   /api_keys/{id}:

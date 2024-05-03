@@ -16,497 +16,6 @@ servers:
 security:
 - bearerAuth: []
 paths:
-  /antifraud/whitelists:
-    get:
-      description: Return all rules
-      operationId: GetRuleWhitelist
-      parameters:
-      - description: Use for knowing which language to use
-        examples:
-          es:
-            summary: for spanish request/response
-            value: es
-          en:
-            summary: for english request/response
-            value: en
-        in: header
-        name: Accept-Language
-        required: false
-        schema:
-          default: es
-          enum:
-          - es
-          - en
-          type: string
-      responses:
-        "200":
-          content:
-            application/vnd.app-v2.1.0+json:
-              schema:
-                $ref: '#/components/schemas/risk_rules_list'
-          description: All the rules
-        "401":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - message: Please include your access key in your request.
-                  param: null
-                  code: femsa.errors.authentication.missing_key
-                log_id: 507f1f77bcf86cd799439011
-                object: error
-                type: authentication_error
-              schema:
-                $ref: '#/components/schemas/error'
-          description: authentication error
-        "403":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - message: "Unauthorized access service, please contact support team"
-                  code: femsa.errors.forbidden.authentication.invalid_whitelist_access
-                  debug_message: "Unauthorized access to whitelists service, please\
-                    \ contact support team"
-                log_id: 641b6d073cd9a50001515007
-                object: error
-                type: processing_error
-              schema:
-                $ref: '#/components/schemas/error'
-          description: forbidden error
-        "500":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - debug_message: There was a runtime error and Femsa engineers have
-                    been notified.
-                  message: There was a runtime error and Femsa engineers have been
-                    notified.
-                  param: null
-                  code: femsa.errors.api.system.general_failure
-                object: error
-                type: api_error
-                log_id: 641b6f2b3cd9a50001515098
-              schema:
-                $ref: '#/components/schemas/error'
-          description: internal server error
-      summary: Get a list of whitelisted rules
-      tags:
-      - Antifraud
-    post:
-      operationId: CreateRuleWhitelist
-      parameters:
-      - description: Use for knowing which language to use
-        examples:
-          es:
-            summary: for spanish request/response
-            value: es
-          en:
-            summary: for english request/response
-            value: en
-        in: header
-        name: Accept-Language
-        required: false
-        schema:
-          default: es
-          enum:
-          - es
-          - en
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/create_risk_rules_data'
-      responses:
-        "200":
-          content:
-            application/vnd.app-v2.1.0+json:
-              schema:
-                $ref: '#/components/schemas/whitelistlist_rule_response'
-          description: successfully registered rule
-        "401":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - message: Please include your access key in your request.
-                  param: null
-                  code: femsa.errors.authentication.missing_key
-                log_id: 507f1f77bcf86cd799439011
-                object: error
-                type: authentication_error
-              schema:
-                $ref: '#/components/schemas/error'
-          description: authentication error
-        "403":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - message: "Unauthorized access service, please contact support team"
-                  code: femsa.errors.forbidden.authentication.invalid_whitelist_access
-                  debug_message: "Unauthorized access to whitelists service, please\
-                    \ contact support team"
-                log_id: 641b6d073cd9a50001515007
-                object: error
-                type: processing_error
-              schema:
-                $ref: '#/components/schemas/error'
-          description: forbidden error
-        "500":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - debug_message: There was a runtime error and Femsa engineers have
-                    been notified.
-                  message: There was a runtime error and Femsa engineers have been
-                    notified.
-                  param: null
-                  code: femsa.errors.api.system.general_failure
-                object: error
-                type: api_error
-                log_id: 641b6f2b3cd9a50001515098
-              schema:
-                $ref: '#/components/schemas/error'
-          description: internal server error
-      summary: Create whitelisted rule
-      tags:
-      - Antifraud
-  /antifraud/whitelists/{id}:
-    delete:
-      operationId: DeleteRuleWhitelist
-      parameters:
-      - description: Identifier of the resource
-        example: 6307a60c41de27127515a575
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Use for knowing which language to use
-        examples:
-          es:
-            summary: for spanish request/response
-            value: es
-          en:
-            summary: for english request/response
-            value: en
-        in: header
-        name: Accept-Language
-        required: false
-        schema:
-          default: es
-          enum:
-          - es
-          - en
-          type: string
-      - description: "In the case of a holding company, the company id of the child\
-          \ company to which will process the request."
-        example: 6441b6376b60c3a638da80af
-        in: header
-        name: X-Child-Company-Id
-        required: false
-        schema:
-          type: string
-      responses:
-        "200":
-          content:
-            application/vnd.app-v2.1.0+json:
-              schema:
-                $ref: '#/components/schemas/deleted_whitelist_rule_response'
-          description: successfully deleted rule
-        "401":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - message: Please include your access key in your request.
-                  param: null
-                  code: femsa.errors.authentication.missing_key
-                log_id: 507f1f77bcf86cd799439011
-                object: error
-                type: authentication_error
-              schema:
-                $ref: '#/components/schemas/error'
-          description: authentication error
-        "403":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - message: "Unauthorized access service, please contact support team"
-                  code: femsa.errors.forbidden.authentication.invalid_whitelist_access
-                  debug_message: "Unauthorized access to whitelists service, please\
-                    \ contact support team"
-                log_id: 641b6d073cd9a50001515007
-                object: error
-                type: processing_error
-              schema:
-                $ref: '#/components/schemas/error'
-          description: forbidden error
-        "404":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - message: The resource was not found.
-                  param: null
-                  code: femsa.errors.resource_not_found.entity
-                  debug_message: The object Webhook "641b1d5662d7e00001eaa46b" could
-                    not be found.
-                log_id: 641b6c253cd9a50001514fae
-                object: error
-                type: resource_not_found_error
-              schema:
-                $ref: '#/components/schemas/error'
-          description: not found entity
-        "500":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - debug_message: There was a runtime error and Femsa engineers have
-                    been notified.
-                  message: There was a runtime error and Femsa engineers have been
-                    notified.
-                  param: null
-                  code: femsa.errors.api.system.general_failure
-                object: error
-                type: api_error
-                log_id: 641b6f2b3cd9a50001515098
-              schema:
-                $ref: '#/components/schemas/error'
-          description: internal server error
-      summary: Delete whitelisted rule
-      tags:
-      - Antifraud
-  /antifraud/blacklists:
-    get:
-      description: Return all rules
-      operationId: GetRuleBlacklist
-      parameters:
-      - description: Use for knowing which language to use
-        examples:
-          es:
-            summary: for spanish request/response
-            value: es
-          en:
-            summary: for english request/response
-            value: en
-        in: header
-        name: Accept-Language
-        required: false
-        schema:
-          default: es
-          enum:
-          - es
-          - en
-          type: string
-      responses:
-        "200":
-          content:
-            application/vnd.app-v2.1.0+json:
-              schema:
-                $ref: '#/components/schemas/risk_rules_list'
-          description: All the rules
-        "401":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - message: Please include your access key in your request.
-                  param: null
-                  code: femsa.errors.authentication.missing_key
-                log_id: 507f1f77bcf86cd799439011
-                object: error
-                type: authentication_error
-              schema:
-                $ref: '#/components/schemas/error'
-          description: authentication error
-        "500":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - debug_message: There was a runtime error and Femsa engineers have
-                    been notified.
-                  message: There was a runtime error and Femsa engineers have been
-                    notified.
-                  param: null
-                  code: femsa.errors.api.system.general_failure
-                object: error
-                type: api_error
-                log_id: 641b6f2b3cd9a50001515098
-              schema:
-                $ref: '#/components/schemas/error'
-          description: internal server error
-      summary: Get list of blacklisted rules
-      tags:
-      - Antifraud
-    post:
-      operationId: CreateRuleBlacklist
-      parameters:
-      - description: Use for knowing which language to use
-        examples:
-          es:
-            summary: for spanish request/response
-            value: es
-          en:
-            summary: for english request/response
-            value: en
-        in: header
-        name: Accept-Language
-        required: false
-        schema:
-          default: es
-          enum:
-          - es
-          - en
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/create_risk_rules_data'
-        description: requested field for blacklist rule
-        required: true
-      responses:
-        "200":
-          content:
-            application/vnd.app-v2.1.0+json:
-              schema:
-                $ref: '#/components/schemas/blacklist_rule_response'
-          description: successfully registered rule
-        "401":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - message: Please include your access key in your request.
-                  param: null
-                  code: femsa.errors.authentication.missing_key
-                log_id: 507f1f77bcf86cd799439011
-                object: error
-                type: authentication_error
-              schema:
-                $ref: '#/components/schemas/error'
-          description: authentication error
-        "500":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - debug_message: There was a runtime error and Femsa engineers have
-                    been notified.
-                  message: There was a runtime error and Femsa engineers have been
-                    notified.
-                  param: null
-                  code: femsa.errors.api.system.general_failure
-                object: error
-                type: api_error
-                log_id: 641b6f2b3cd9a50001515098
-              schema:
-                $ref: '#/components/schemas/error'
-          description: internal server error
-      summary: Create blacklisted rule
-      tags:
-      - Antifraud
-  /antifraud/blacklists/{id}:
-    delete:
-      operationId: DeleteRuleBlacklist
-      parameters:
-      - description: Identifier of the resource
-        example: 6307a60c41de27127515a575
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Use for knowing which language to use
-        examples:
-          es:
-            summary: for spanish request/response
-            value: es
-          en:
-            summary: for english request/response
-            value: en
-        in: header
-        name: Accept-Language
-        required: false
-        schema:
-          default: es
-          enum:
-          - es
-          - en
-          type: string
-      - description: "In the case of a holding company, the company id of the child\
-          \ company to which will process the request."
-        example: 6441b6376b60c3a638da80af
-        in: header
-        name: X-Child-Company-Id
-        required: false
-        schema:
-          type: string
-      responses:
-        "200":
-          content:
-            application/vnd.app-v2.1.0+json:
-              schema:
-                $ref: '#/components/schemas/deleted_blacklist_rule_response'
-          description: successfully deleted rule
-        "401":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - message: Please include your access key in your request.
-                  param: null
-                  code: femsa.errors.authentication.missing_key
-                log_id: 507f1f77bcf86cd799439011
-                object: error
-                type: authentication_error
-              schema:
-                $ref: '#/components/schemas/error'
-          description: authentication error
-        "404":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - message: The resource was not found.
-                  param: null
-                  code: femsa.errors.resource_not_found.entity
-                  debug_message: The object Webhook "641b1d5662d7e00001eaa46b" could
-                    not be found.
-                log_id: 641b6c253cd9a50001514fae
-                object: error
-                type: resource_not_found_error
-              schema:
-                $ref: '#/components/schemas/error'
-          description: not found entity
-        "500":
-          content:
-            application/vnd.app-v2.1.0+json:
-              example:
-                details:
-                - debug_message: There was a runtime error and Femsa engineers have
-                    been notified.
-                  message: There was a runtime error and Femsa engineers have been
-                    notified.
-                  param: null
-                  code: femsa.errors.api.system.general_failure
-                object: error
-                type: api_error
-                log_id: 641b6f2b3cd9a50001515098
-              schema:
-                $ref: '#/components/schemas/error'
-          description: internal server error
-      summary: Delete blacklisted rule
-      tags:
-      - Antifraud
   /api_keys:
     get:
       description: Consume the list of api keys you have
@@ -9033,14 +8542,6 @@ components:
         - es
         - en
         type: string
-    id:
-      description: Identifier of the resource
-      example: 6307a60c41de27127515a575
-      in: path
-      name: id
-      required: true
-      schema:
-        type: string
     x_child_company_id:
       description: "In the case of a holding company, the company id of the child\
         \ company to which will process the request."
@@ -9073,6 +8574,14 @@ components:
       in: query
       name: previous
       required: false
+      schema:
+        type: string
+    id:
+      description: Identifier of the resource
+      example: 6307a60c41de27127515a575
+      in: path
+      name: id
+      required: true
       schema:
         type: string
     search:
@@ -9404,21 +8913,6 @@ components:
           schema:
             $ref: '#/components/schemas/error'
       description: authentication error
-    "403":
-      content:
-        application/vnd.app-v2.1.0+json:
-          example:
-            details:
-            - message: "Unauthorized access service, please contact support team"
-              code: femsa.errors.forbidden.authentication.invalid_whitelist_access
-              debug_message: "Unauthorized access to whitelists service, please contact\
-                \ support team"
-            log_id: 641b6d073cd9a50001515007
-            object: error
-            type: processing_error
-          schema:
-            $ref: '#/components/schemas/error'
-      description: forbidden error
     "500":
       content:
         application/vnd.app-v2.1.0+json:
@@ -9435,6 +8929,21 @@ components:
           schema:
             $ref: '#/components/schemas/error'
       description: internal server error
+    "422":
+      content:
+        application/vnd.app-v2.1.0+json:
+          example:
+            details:
+            - message: The name does not exist.
+              param: payment_method.name
+              code: femsa.errors.parameter_validation.payment_method.name.nonexistent_token
+              debug_message: The name does not exist.
+            log_id: 641b6d813cd9a50001515017
+            object: error
+            type: parameter_validation_error
+          schema:
+            $ref: '#/components/schemas/error'
+      description: parameter validation error
     "404":
       content:
         application/vnd.app-v2.1.0+json:
@@ -9451,21 +8960,6 @@ components:
           schema:
             $ref: '#/components/schemas/error'
       description: not found entity
-    "422":
-      content:
-        application/vnd.app-v2.1.0+json:
-          example:
-            details:
-            - message: The name does not exist.
-              param: payment_method.name
-              code: femsa.errors.parameter_validation.payment_method.name.nonexistent_token
-              debug_message: The name does not exist.
-            log_id: 641b6d813cd9a50001515017
-            object: error
-            type: parameter_validation_error
-          schema:
-            $ref: '#/components/schemas/error'
-      description: parameter validation error
     "422_whitelist":
       content:
         application/vnd.app-v2.1.0+json:
@@ -9512,54 +9006,6 @@ components:
             $ref: '#/components/schemas/error'
       description: payment required error
   schemas:
-    risk_rules_list:
-      allOf:
-      - $ref: '#/components/schemas/pagination'
-      - $ref: '#/components/schemas/page'
-      - properties:
-          data:
-            items:
-              $ref: '#/components/schemas/risk_rules_data'
-            type: array
-        title: risk_rules
-        type: object
-    error:
-      allOf:
-      - $ref: '#/components/schemas/details'
-      - properties:
-          log_id:
-            description: log id
-            example: 507f1f77bcf86cd799439011
-            nullable: true
-            type: string
-          type:
-            example: authentication_error
-            type: string
-          object:
-            example: error
-            type: string
-        type: object
-      description: err model
-      title: error
-    create_risk_rules_data:
-      properties:
-        description:
-          description: Description of the rule
-          example: this client email was verified at 20/09/22 by internal process
-          type: string
-        field:
-          description: Field to be used for the rule
-          example: 'email | phone '
-          type: string
-        value:
-          description: Value to be used for the rule
-          example: email@example.com | 818081808180 | src_2qUCNd5AyQqfPMBuV
-          type: string
-      required:
-      - description
-      - field
-      - value
-      type: object
     page:
       description: page metadata
       properties:
@@ -9644,6 +9090,24 @@ components:
           type: string
       title: api_key_response
       type: object
+    error:
+      allOf:
+      - $ref: '#/components/schemas/details'
+      - properties:
+          log_id:
+            description: log id
+            example: 507f1f77bcf86cd799439011
+            nullable: true
+            type: string
+          type:
+            example: authentication_error
+            type: string
+          object:
+            example: error
+            type: string
+        type: object
+      description: err model
+      title: error
     api_key_response_on_delete:
       description: api keys model
       properties:
@@ -11904,86 +11368,6 @@ components:
           type: string
       title: company_fiscal_info_address_response
       type: object
-    whitelistlist_rule_response:
-      properties:
-        id:
-          description: Whitelist rule id
-          example: 2fw8EWJusiRrxdPzT
-          type: string
-        field:
-          description: field used for whitelists rule
-          example: email
-          type: string
-        value:
-          description: value used for whitelists rule
-          example: email@example.com
-          type: string
-        description:
-          description: use an description for whitelisted rule
-          example: banned customer example@example.com
-          type: string
-      title: whitelistlist_rule_response
-      type: object
-    deleted_whitelist_rule_response:
-      properties:
-        id:
-          description: Whitelist rule id
-          example: 2fw8EWJusiRrxdPzT
-          type: string
-        field:
-          description: field used for whitelists rule deleted
-          example: email
-          type: string
-        value:
-          description: value used for whitelists rule deleted
-          example: email@example.com
-          type: string
-        description:
-          description: use an description for whitelisted rule
-          example: secure customer example@example.com
-          type: string
-      title: deleted_whitelist_rule_response
-      type: object
-    blacklist_rule_response:
-      properties:
-        id:
-          description: Blacklist rule id
-          example: 2fw8EWJusiRrxdPzT
-          type: string
-        field:
-          description: field used for blacklists rule
-          example: email
-          type: string
-        value:
-          description: value used for blacklists rule
-          example: email@example.com
-          type: string
-        description:
-          description: use an description for blacklisted rule
-          example: secure customer example@example.com
-          type: string
-      title: blacklist_rule_response
-      type: object
-    deleted_blacklist_rule_response:
-      properties:
-        id:
-          description: Blacklist rule id
-          example: 2fw8EWJusiRrxdPzT
-          type: string
-        field:
-          description: field used for blacklists rule deleted
-          example: email
-          type: string
-        value:
-          description: value used for blacklists rule deleted
-          example: email@example.com
-          type: string
-        description:
-          description: use an description for blacklisted rule
-          example: banned customer example@example.com
-          type: string
-      title: deleted_blacklist_rule_response
-      type: object
     get_api_keys_response:
       allOf:
       - $ref: '#/components/schemas/page'
@@ -12305,37 +11689,6 @@ components:
             type: array
         type: object
       title: get_webhooks_response
-    risk_rules_data:
-      properties:
-        id:
-          description: rule id
-          example: 618c3f2fdb8b8da9be376af9
-          type: string
-        field:
-          description: field to be used for the rule
-          example: email
-          type: string
-        created_at:
-          description: rule creation date
-          example: 2021-11-10T21:52:47.339Z
-          type: string
-        value:
-          description: value to be used for the rule
-          example: email@example.com
-          type: string
-        is_global:
-          description: if the rule is global
-          example: false
-          type: boolean
-        is_test:
-          description: if the rule is test
-          example: false
-          type: boolean
-        description:
-          description: description of the rule
-          example: secure customer example@example.com
-          type: string
-      type: object
     charge_response_channel:
       properties:
         segment:
