@@ -79,11 +79,6 @@ properties:
     type: string
     description: "Indicates the processing mode for the order, either ecommerce, recurrent or validation."
     example: "ecommerce"
-  return_url:
-    type: string
-    format: uri
-    description: "Indicates the redirection callback upon completion of the 3DS2 flow."
-    example: https://my-website.com
   shipping_contact:
     $ref: ../../schemas/customers/customer_shipping_contacts.yml
   shipping_lines:
