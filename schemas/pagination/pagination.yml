@@ -1,0 +1,15 @@
+title: pagination metadata
+description: pagination metadata
+type: object
+required:
+  - object
+  - has_more
+properties:
+  has_more:
+    type: boolean
+    example: false
+    description: "Indicates if there are more pages to be requested"
+  object:
+    type: string
+    example: "list"
+    description: "Object type, in this case is list"

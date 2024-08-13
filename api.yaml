@@ -1,0 +1,121 @@
+openapi: "3.0.3"
+servers:
+  - url: https://api.digitalfemsa.io
+    description: Femsa main server
+info:
+  description: Femsa sdk
+  version: 2.1.0
+  contact:
+    name: Engineering Femsa
+    url: https://github.com/digitalfemsa/openapi/issues
+    email: engineering@femsa.com
+  title: Femsa API
+  license:
+    name: MIT-LICENSE
+    url: "https://www.apache.org/licenses/LICENSE-2.0.html"
+paths:
+  /api_keys:
+    $ref: "./resources/api_keys/api_keys.yml"
+  /api_keys/{id}:
+    $ref: "./resources/api_keys/api_key.yml"
+  /balance:
+    $ref: "./resources/balances/balances.yml"
+  /charges:
+    $ref: "./resources/charges/charges.yml"
+  /charges/{id}:
+    $ref: "./resources/charges/update_charge.yml"
+  /orders/{id}/charges:
+    $ref: "./resources/orders/order_charge_param.yml"
+  /companies:
+    $ref: "./resources/companies/companies.yml"
+  /companies/{id}:
+    $ref: "./resources/companies/company.yml"
+  /customers:
+    $ref: "./resources/customers/create_customer.yml"
+  /customers/{id}:
+    $ref: "./resources/customers/get_customer.yml"
+  /customers/{id}/fiscal_entities:
+    $ref: "./resources/customers/create_customer_fiscal_entities.yml"
+  /customers/{id}/fiscal_entities/{fiscal_entities_id}:
+    $ref: "./resources/customers/update_customer_fiscal_entities.yml"
+  /orders/{id}/discount_lines:
+    $ref: "./resources/orders/discount_lines_param.yml"
+  /orders/{id}/discount_lines/{discount_lines_id}:
+    $ref: "./resources/orders/update_order_discount_lines_param.yml"
+  /events:
+    $ref: "./resources/events/events.yml"
+  /events/{id}:
+    $ref: "./resources/events/event.yml"
+  /events/{event_id}/webhook_logs/{webhook_log_id}/resend:
+    $ref: "./resources/events/events_resend.yml"
+  /logs:
+    $ref: "./resources/logs/log.yml"
+  /logs/{id}:
+    $ref: "./resources/logs/log_by_id.yml"
+  /orders:
+    $ref: "./resources/orders/order.yml"
+  /orders/{id}:
+    $ref: "./resources/orders/order_param.yml"
+  /orders/{id}/cancel:
+    $ref: "./resources/orders/order_cancel_param.yml"
+  /orders/{id}/capture:
+    $ref: "./resources/orders/order_capture_param.yml"
+  /orders/{id}/line_items:
+    $ref: "./resources/orders/order_product_param.yml"
+  /orders/{id}/line_items/{line_item_id}:
+    $ref: "./resources/orders/update_order_product_param.yml"
+  /orders/{id}/refunds:
+    $ref: "./resources/orders/order_refunds_param.yml"
+  /orders/{id}/refunds/{refund_id}:
+    $ref: "./resources/orders/order_cancel_refunds_param.yml"
+  /checkouts:
+    $ref: "./resources/checkouts/checkouts.yml"
+  /checkouts/{id}:
+    $ref: "./resources/checkouts/checkout.yml"
+  /checkouts/{id}/cancel:
+    $ref: "./resources/checkouts/checkout_cancel.yml"
+  /checkouts/{id}/email:
+    $ref: "./resources/checkouts/checkout_email.yml"
+  /checkouts/{id}/sms:
+    $ref: "./resources/checkouts/checkout_sms.yml"
+  /customers/{id}/payment_sources:
+    $ref: "./resources/customers/create_customer_payment_methods.yml"
+  /customers/{id}/payment_sources/{payment_method_id}:
+    $ref: "./resources/customers/update_customer_payment_methods.yml"
+  /orders/{id}/shipping_lines:
+    $ref: "./resources/orders/order_shipping_param.yml"
+  /orders/{id}/shipping_lines/{shipping_id}:
+    $ref: "./resources/orders/update_order_shipping_param.yml"
+  /customers/{id}/shipping_contacts:
+    $ref: "./resources/customers/create_customer_shipping_contacts.yml"
+  /customers/{id}/shipping_contacts/{shipping_contacts_id}:
+    $ref: "./resources/customers/update_customer_shipping_contacts.yml"
+  /orders/{id}/tax_lines:
+    $ref: "./resources/orders/order_tax_param.yml"
+  /orders/{id}/tax_lines/{tax_id}:
+    $ref: "./resources/orders/update_order_tax_param.yml"
+  /transactions:
+    $ref: "./resources/transactions/transactions.yml"
+  /transactions/{id}:
+    $ref: "./resources/transactions/transaction.yml"
+  /transfers:
+    $ref: "./resources/transfers/transfers.yml"
+  /transfers/{id}:
+    $ref: "./resources/transfers/transfer.yml"
+  /webhook_keys:
+    $ref: "./resources/webhook_keys/webhook_keys.yml"
+  /webhook_keys/{id}:
+    $ref: "./resources/webhook_keys/webhook_key.yml"
+  /webhooks:
+    $ref: "./resources/webhooks/webhooks.yml"
+  /webhooks/{id}:
+    $ref: "./resources/webhooks/webhook.yml"
+  /webhooks/{id}/test:
+    $ref: "./resources/webhooks/webhook_test.yml"
+security:
+  - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer

@@ -1,0 +1,20 @@
+description: requested field for a refund
+content:
+  application/json:
+    schema:  
+      required:
+        - amount
+        - reason
+      properties:
+        amount: 
+          type: integer
+          example: 500
+        expires_at:
+          type: integer
+          example: 1553273553
+          nullable: true
+          format: int64
+        reason:
+          type: string
+          example: "suspected_fraud"
+required: true

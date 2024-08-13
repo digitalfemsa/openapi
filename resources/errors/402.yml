@@ -1,0 +1,17 @@
+description: payment required error
+content:
+  application/vnd.app-v2.1.0+json:
+    schema:
+      $ref: '../../schemas/errors/error.yml'
+    example:
+      details: [
+        {
+          message: "The order could not be processed.",
+          code: "femsa.errors.processing.order.used",
+          debug_message: "The order has already been used.",
+        }
+      ]
+      log_id: "641b6d073cd9a50001515007"
+      object: "error"
+      type: "processing_error"
+ 

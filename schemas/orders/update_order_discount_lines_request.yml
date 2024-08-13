@@ -1,0 +1,15 @@
+title: update_order_discount_lines_request
+description: "List of discounts that apply to the order."
+properties:
+  amount:
+    type: integer
+    format: int64
+    example: 500
+    minimum: 0
+  code:
+    type: string
+    description: "Discount code."
+    example: "123"
+  type:
+    type: string
+    example: "loyalty"

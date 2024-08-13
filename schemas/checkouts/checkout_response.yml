@@ -1,0 +1,80 @@
+title: checkout_response
+description: checkout response
+type: object
+required:
+  - id
+  - livemode
+  - object
+  - name
+properties:
+  allowed_payment_methods:
+    type: array
+    items:
+      type: string
+    example: [ "cash"]
+  can_not_expire:
+    type: boolean
+    example: false
+  emails_sent:
+    type: integer
+    example: 0
+  expires_at:
+    type: integer
+    example: 1680397724
+    format: int64
+  failure_url:
+    type: string
+    example: "https://pay.femsa.com/failure"
+  id:
+    type: string
+    example: "b0bf16c4-18b9-445e-ba24-01604f329dbf"
+  livemode: 
+    type: boolean
+    example: true
+  metadata:
+    type: object
+    additionalProperties: true
+    example: { "key": "value" }
+  name:
+    type: string
+    description: Reason for charge
+    example:  Payment Link Name 1594138857
+  needs_shipping_contact:
+    type: boolean
+    example: false
+  object:
+    type: string
+    example: "checkout"
+  paid_payments_count:
+    type: integer
+    example: 0
+  payments_limit_count:
+    type: integer
+    format: int8
+    example: 5
+    nullable: true
+  recurrent:
+    type: boolean
+    example: false
+  slug:
+    type: string
+    example: "b0bf16c418b9445eba2401604f329dbf"
+  sms_sent:
+    type: integer
+    example: 0
+  starts_at:
+    type: integer
+    example: 1677650400
+  status:
+    type: string
+    example:  "Issued"
+  success_url:
+    type: string
+    example: "https://pay.femsa.com/success"
+  type:
+    type: string
+    example: "PaymentLink"
+  url:
+    type: string
+    format: uri
+    example: "https://pay.femsa.com/link/b0bf16c418b9445eba2401604f329dbf"

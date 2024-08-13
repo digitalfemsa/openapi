@@ -1,0 +1,7 @@
+in: query
+name: "url"
+description: "url for webhook filter"
+required: false
+example: "https://api.digitalfemsa.io/webhook"
+schema:
+  type: string

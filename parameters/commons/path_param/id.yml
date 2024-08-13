@@ -1,0 +1,7 @@
+in: path
+name: "id"
+description:  Identifier of the resource
+required: true
+schema:
+  type: string
+example: "6307a60c41de27127515a575"

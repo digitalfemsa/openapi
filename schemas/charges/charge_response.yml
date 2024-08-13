@@ -1,0 +1,119 @@
+title: charges_data_response
+type: object
+properties:
+  amount: 
+    type: integer
+    example: 4321
+  channel:
+    type: object
+    properties:
+      segment:
+        type: string
+        example: "Checkout"
+      checkout_request_id:
+        type: string
+        example: "6fca054a-8519-4c43-971e-cea35cc519bb"
+      checkout_request_type:
+        type: string
+        example: "HostedPayment"
+      id:
+        type: string
+        example: "channel_2tNDzhA4Akmzj11AU"
+  created_at:
+    type: integer
+    example: 1676386026
+    format: int64
+  currency:
+    type: string
+    example: MXN
+  customer_id:
+    type: string
+  description:
+    type: string
+    example: "Payment from order"
+  device_fingerprint:
+    type: string
+    example: "6FR3chaU4Y1nGAW5NAGd1rcjAKa142Ba"
+  failure_code: 
+    type: string
+    example: "suspected_fraud"
+  failure_message: 
+    type: string
+    example: "Este cargo ha sido declinado porque el comportamiento del comprador es sospechoso."
+  id: 
+    type: string
+    example: "63efa757cf65380001aec040"
+  livemode:
+    type: boolean
+  object:
+    type: string
+  order_id:
+    type: string
+    example: "ord_2tN73UdUSNrYRPD9r"
+  paid_at:
+    type: integer
+    example: 1676390742
+    nullable: true
+  payment_method:
+    title: charge_response_payment_method
+    oneOf:
+      - $ref: 'charge_payment_method_cash_response.yml#/payment_method_cash'
+    discriminator:
+      propertyName: object
+      mapping:
+        cash_payment: payment_method_cash
+  reference_id:
+    type: string
+    description: "Reference ID of the charge"
+    example: ref_2tN73UdUSNrYRPD9r
+    nullable: true
+  refunds:
+    type: object
+    title: charge_response_refunds
+    allOf:
+      - $ref: ../pagination/pagination.yml
+      - $ref: ../pagination/page.yml
+      - type: object
+        properties:
+          data:
+            description: refunds
+            type: array
+            items:
+              title: charge_response_refunds_data
+              required:
+                - object
+                - id
+                - amount
+                - created_at
+              properties:
+                amount:
+                  type: integer
+                  format: int64
+                  example: -15000
+                auth_code:
+                  type: string
+                  example: "867372"
+                created_at:
+                  type: integer
+                  example: 1678226878
+                  format: int64
+                expires_at:
+                  type: integer
+                  example: 1678226878
+                  format: int64
+                  description: refund expiration date
+                id:
+                  type: string
+                  example: "6407b5bee1329a000175ba11"
+                object:
+                  type: string
+                  example: "refund"
+                status:
+                  type: string
+                  example: "pending"
+                  description: refund status
+    nullable: true
+  status:
+    type: string
+    example: "pending_payment"
+  

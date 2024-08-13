@@ -1,0 +1,30 @@
+title: charges
+description: "The charges to be made"
+required:
+  - payment_method
+properties:
+  amount:
+    type: integer
+    example: 40000
+  payment_method:
+    required:
+      - type
+    type: object
+    description: |
+          Payment method used in the charge. Go to the [payment methods](https://developers.femsa.com/reference/m%C3%A9todos-de-pago) section for more details
+    properties:
+      expires_at:
+        type: integer
+        format: int64
+        description: "Method expiration date as unix timestamp"
+        example: 1677196303
+      type:
+        type: string
+        example: "cash"
+      payment_source_id:
+        type: string
+        example: "src_2tLkkyfMPh6v7pFry"
+  reference_id:
+    description: "Custom reference to add to the charge"
+    type: string
+  

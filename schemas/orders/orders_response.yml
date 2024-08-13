@@ -1,0 +1,9 @@
+title: orders_response
+type: object
+required:
+  - data
+properties:
+  data:
+    type: array
+    items:
+      $ref: order_response.yml
