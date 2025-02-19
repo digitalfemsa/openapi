@@ -1,7 +1,7 @@
 title: charges_data_response
 type: object
 properties:
-  amount: 
+  amount:
     type: integer
     example: 4321
   channel:
@@ -34,13 +34,13 @@ properties:
   device_fingerprint:
     type: string
     example: "6FR3chaU4Y1nGAW5NAGd1rcjAKa142Ba"
-  failure_code: 
+  failure_code:
     type: string
     example: "suspected_fraud"
-  failure_message: 
+  failure_message:
     type: string
     example: "Este cargo ha sido declinado porque el comportamiento del comprador es sospechoso."
-  id: 
+  id:
     type: string
     example: "63efa757cf65380001aec040"
   livemode:
@@ -112,8 +112,10 @@ properties:
                   type: string
                   example: "pending"
                   description: refund status
+                payout_id:
+                  type: string
+                  example: "6fca054a-8519-4c43-971e-cea35cc519bb"
     nullable: true
   status:
     type: string
     example: "pending_payment"
-  
