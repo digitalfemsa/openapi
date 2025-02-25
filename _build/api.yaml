@@ -11750,6 +11750,9 @@ components:
         payout_id:
           example: 6fca054a-8519-4c43-971e-cea35cc519bb
           type: string
+        reference:
+          example: '************005'
+          type: string
       required:
       - amount
       - created_at
