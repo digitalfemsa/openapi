@@ -118,7 +118,7 @@ properties:
                 reference:
                   type: string
                   example: "12002000778626"
-                  description: reference id
+                  description: payout reference for oxxo stores  
     nullable: true
   status:
     type: string
