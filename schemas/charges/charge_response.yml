@@ -115,6 +115,10 @@ properties:
                 payout_id:
                   type: string
                   example: "6fca054a-8519-4c43-971e-cea35cc519bb"
+                reference:
+                  type: string
+                  example: "12002000778626"
+                  description: payout reference for oxxo stores  
     nullable: true
   status:
     type: string
