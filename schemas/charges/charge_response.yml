@@ -117,7 +117,8 @@ properties:
                   example: "6fca054a-8519-4c43-971e-cea35cc519bb"
                 reference:
                   type: string
-                  example: "************005"
+                  example: "12002000778626"
+                  description: reference id
     nullable: true
   status:
     type: string
