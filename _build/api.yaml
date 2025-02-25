@@ -11751,7 +11751,7 @@ components:
           example: 6fca054a-8519-4c43-971e-cea35cc519bb
           type: string
         reference:
-          description: reference id
+          description: payout reference for oxxo stores
           example: "12002000778626"
           type: string
       required:
